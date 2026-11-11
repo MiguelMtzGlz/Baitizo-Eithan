@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Bautizo - Eithan André</title>
+    <!-- Tailwind CSS para la estructura y diseño limpio -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background-color: #ffffff; /* FONDO DE ATRÁS COMPLETAMENTE EN BLANCO SIN PUNTOS */
+        }
+        .font-serif {
+
+            font-family: 'Playfair Display', serif;
+        }
+        .font-handwritten {
+            font-family: 'Caveat', cursive;
+        }
+        /* Patrón de puntos grises exclusivo para el fondo interno de la invitación */
+        .bg-pattern-invert {
+            background-color: #f4f7f9;
+            background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        /* Animaciones fluidas para nubes, angelito y destellos dorados animados */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+        @keyframes drift {
+            0%, 100% { transform: translateX(0px); }
+            50% { transform: translateX(12px); }
+
+        }
+        @keyframes sparkle {
+            0%, 100% { opacity: 0.2; transform: scale(0.7) rotate(0deg); filter: drop-shadow(0 0 2px rgba(229,193,88,0.4)); }
+            50% { opacity: 1; transform: scale(1.4) rotate(90deg); filter: drop-shadow(0 0 6px rgba(229,193,88,0.9)); }
+        }
+        .anim-float { animation: float 5s ease-in-out infinite; }
+        .anim-drift { animation: drift 7s ease-in-out infinite; }
+        .anim-sparkle { animation: sparkle 2s ease-in-out infinite; }
+    </style>
+</head>
+<body class="min-h-screen p-4 flex flex-col items-center justify-center relative overflow-x-hidden">
+
+    <!-- NUBES CONFIGURADAS CON ALTA PRIORIDAD VISUAL (Z-INDEX-20) AL FRENTE -->
+    <div class="absolute top-8 left-2 sm:left-10 text-slate-200/80 text-4xl anim-drift z-20 pointer-events-none select-none">☁️</div>
+    <div class="absolute top-16 right-4 sm:right-12 text-slate-200/70 text-5xl anim-drift z-20 pointer-events-none select-none" style="animation-delay: 2s;">☁️</div>
+    <div class="absolute top-1/3 left-1 text-slate-200/50 text-3xl anim-drift z-20 pointer-events-none select-none" style="animation-delay: 4s;">☁️</div>
+    <div class="absolute bottom-1/3 right-1 text-slate-200/60 text-4xl anim-drift z-20 pointer-events-none select-none" style="animation-delay: 1s;">☁️</div>
+    <div class="absolute bottom-24 left-4 text-slate-200/50 text-5xl anim-drift z-20 pointer-events-none select-none" style="animation-delay: 3s;">☁️</div>
+
+
+    <!-- Tarjeta Principal de la Invitación con el Borde Original Fijo Fino y Delicado -->
+    <div class="w-full max-w-[380px] bg-pattern-invert rounded-[2rem] shadow-xl overflow-hidden border-[6px] border-[#e5c158]/30 flex flex-col relative z-10 my-4">
+        
+        <!-- MARCO DE DESTELLOS DORADOS ANIMADOS CONFIGURADOS EN ALTURAS LIMPIAS -->
+        <div class="absolute top-2 left-2 text-[#e5c158] text-sm font-bold select-none cursor-default anim-sparkle" style="animation-delay: 0s;">✨</div>
+        <div class="absolute top-2 right-2 text-[#e5c158] text-sm font-bold select-none cursor-default anim-sparkle" style="animation-delay: 0.4s;">✨</div>
+        <div class="absolute top-1/4 left-1.5 text-[#e5c158] text-xs font-bold select-none cursor-default anim-sparkle" style="animation-delay: 1.1s;">✨</div>
+        <div class="absolute top-1/4 right-1.5 text-[#e5c158] text-xs font-bold select-none cursor-default anim-sparkle" style="animation-delay: 0.7s;">✨</div>
+        <div class="absolute top-1/2 left-1 text-[#e5c158] text-xs font-bold select-none cursor-default anim-sparkle" style="animation-delay: 1.5s;">✨</div>
+        <div class="absolute top-1/2 right-1 text-[#e5c158] text-xs font-bold select-none cursor-default anim-sparkle" style="animation-delay: 0.2s;">✨</div>
+        <div class="absolute top-3/4 left-1.5 text-[#e5c158] text-xs font-bold select-none cursor-default anim-sparkle" style="animation-delay: 0.9s;">✨</div>
+        <div class="absolute top-3/4 right-1.5 text-[#e5c158] text-xs font-bold select-none cursor-default anim-sparkle" style="animation-delay: 1.3s;">✨</div>
+        <div class="absolute bottom-12 left-2 text-[#e5c158] text-sm font-bold select-none cursor-default anim-sparkle" style="animation-delay: 0.6s;">✨</div>
+        <!-- LA ESTRELLA DUPLICADA INFERIOR DERECHA QUE SE ENCIMABA HA SIDO REMOVIDA COMPLETAMENTE -->
+        
+        <!-- SECCIÓN 1: CABECERA Y ÁNGEL -->
+        <div class="relative pt-12 pb-6 px-6 text-center">
+            <p class="text-slate-400 tracking-[0.25em] text-[10px] font-bold uppercase mb-2">Doy gracias a Dios por el don de mi vida</p>
+            <h1 class="font-handwritten text-4xl sm:text-5xl text-[#4a6572] mb-4">Mi Bautizo</h1>
+
+            
+            <!-- Círculo del Angelito Ilustrado -->
+            <div class="w-44 h-44 mx-auto bg-gradient-to-b from-[#ffffff] to-[#e2ecf5] rounded-full p-4 flex items-center justify-center shadow-md relative border border-white">
+                <svg viewBox="0 0 100 100" class="w-32 h-32 anim-float">
+                    <!-- Alas del angelito -->
+                    <path d="M 32,44 C 18,28 6,46 18,60 C 8,66 14,78 28,68 C 22,76 34,80 36,66" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.5" />
+                    <path d="M 68,44 C 82,28 94,46 82,60 C 92,66 86,78 72,68 C 78,76 66,80 64,66" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.5" />
+                    <!-- Aureola dorada -->
+                    <ellipse cx="50" cy="16" r="14" r_y="4" fill="none" stroke="#ffd54f" stroke-width="2.5" />
+                    <!-- Túnica blanca -->
+                    <path d="M 34,76 L 42,46 L 58,46 L 66,76 Z" fill="#ffffff" stroke="#cbd5e1" stroke-width="0.5" />
+                    <!-- Cabeza/Rostro -->
+                    <circle cx="50" cy="34" r="15" fill="#fcd8c1" />
+                    <!-- Cabello -->
+                    <path d="M 35,34 C 33,19 67,19 65,34 C 66,24 34,24 35,34 Z" fill="#8d6e63" />
+                    <!-- Ojos cerrados (Feliz) -->
+                    <path d="M 42,35 Q 45,38 47,35" fill="none" stroke="#4e342e" stroke-width="1.5" stroke-linecap="round" />
+                    <path d="M 53,35 Q 55,38 58,35" fill="none" stroke="#4e342e" stroke-width="1.5" stroke-linecap="round" />
+                    <!-- Chapitas -->
+
+                    <circle cx="39" cy="39" r="2.5" fill="#ff8a80" opacity="0.6" />
+                    <circle cx="61" cy="39" r="2.5" fill="#ff8a80" opacity="0.6" />
+                    <!-- Manitas rezando -->
+                    <path d="M 47,52 Q 50,47 53,52 Z" fill="#fcd8c1" stroke="#cbd5e1" stroke-width="0.5" />
+                </svg>
+                <!-- Detalles inferiores del círculo (Paloma de la paz grande) -->
+                <div class="absolute -bottom-2.5 inset-x-0 flex justify-center items-center text-lg filter drop-shadow-sm select-none">
+                    <span>🕊️</span>
+                </div>
+            </div>
+
+            <!-- Nombre del Festejado -->
+            <div class="mt-6 space-y-1">
+                <h2 class="font-serif text-3xl font-bold tracking-wide text-[#233946] uppercase">Eithan André</h2>
+                <h3 class="font-serif text-xl tracking-wider text-[#4a6572] font-semibold uppercase">MARTÍNEZ RESÉNDIZ</h3>
+            </div>
+            
+            <div class="w-20 h-[2px] bg-[#e5c158] mx-auto my-4"></div>
+            <p class="text-slate-600 font-medium text-sm sm:text-base">Sábado, 16 de Enero de 2027</p>
+
+        </div>
+
+        <!-- Cuerpo de Tarjetas Internas - TONO AZÚL SUAVE TRASLÚCIDO ORIGINAL -->
+        <div class="px-5 pb-8 space-y-5 flex-1 overflow-y-auto relative">
+            
+            <!-- CONTADOR DE TIEMPO REGRESIVO -->
+            <div class="bg-[#f0f5f9] border border-slate-200/80 rounded-2xl p-4 text-center shadow-sm">
+                <p class="text-[10px] sm:text-xs text-slate-500 uppercase tracking-widest mb-3 font-bold flex items-center justify-center gap-1">
+                    ⏳ "El gran día comienza en"
+                </p>
+                <div class="grid grid-cols-4 gap-2 max-w-xs mx-auto">
+                    <div class="bg-white p-2 rounded-xl border border-slate-100">
+                        <span id="dias" class="block font-sans text-2xl font-bold text-[#e5c158]">66</span>
+                        <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Días</span>
+                    </div>
+                    <div class="bg-white p-2 rounded-xl border border-slate-100">
+                        <span id="horas" class="block font-sans text-2xl font-bold text-[#233946]">13</span>
+                        <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Horas</span>
+                    </div>
+
+                    <div class="bg-white p-2 rounded-xl border border-slate-100">
+                        <span id="minutos" class="block font-sans text-2xl font-bold text-[#233946]">48</span>
+                        <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Min</span>
+                    </div>
+                    <div class="bg-white p-2 rounded-xl border border-slate-100">
+                        <span id="segundos" class="block font-sans text-2xl font-bold text-[#233946]">02</span>
+                        <span class="text-[9px] font-bold text-slate-400 uppercase tracking-wider">Seg</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN: PADRES Y PADRINOS -->
+            <div class="bg-[#f0f5f9] border border-slate-200/80 rounded-2xl p-5 shadow-sm">
+                <h4 class="text-center font-serif text-base font-bold text-[#233946] mb-3">Mis Padres y Padrinos</h4>
+                <div class="grid grid-cols-2 gap-4 text-[13px] border-t border-slate-200/60 pt-3">
+                    <div class="text-center space-y-1">
+                        <p class="font-bold text-[#e5c158] text-[10px] uppercase tracking-wider">Nombre de los Papás</p>
+                        <p class="font-medium text-slate-800 leading-tight">Miguel Angel Martínez González.</p>
+                        <p class="font-medium text-slate-800 leading-tight">María Fernanda Reséndiz Camacho.</p>
+
+                    </div>
+                    <div class="text-center space-y-1 border-l border-slate-200/60">
+                        <p class="font-bold text-[#e5c158] text-[10px] uppercase tracking-wider">Mis Padrinos</p>
+                        <p class="font-medium text-slate-800 leading-tight">Marlene González</p>
+                        <p class="font-medium text-slate-800 leading-tight">Guadalupe</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN: ITINERARIO DE LA CELEBRACIÓN -->
+            <div class="bg-[#f0f5f9] border border-slate-200/80 rounded-2xl p-5 relative shadow-sm">
+                <div class="text-center mb-3">
+                    <span class="text-lg">⏳</span>
+                    <h4 class="font-serif text-base font-bold text-[#233946]">Itinerario de la Celebración</h4>
+                    <p class="text-[11px] text-slate-400 font-medium">Sigue los momentos más especiales de nuestro día</p>
+                </div>
+                
+                <!-- Timeline Estilo Gráfico -->
+                <div class="relative border-l border-slate-300 ml-3 mt-4 space-y-5">
+
+                    <!-- Evento 1 -->
+                    <div class="relative pl-6">
+                        <div class="absolute -left-[6px] top-1 bg-white border-2 border-[#e5c158] w-3 h-3 rounded-full"></div>
+                        <span class="text-[11px] font-bold bg-white text-[#4a6572] border border-slate-200/40 px-2 py-0.5 rounded-md shadow-sm">12:00 PM</span>
+                        <h5 class="font-bold text-sm text-[#233946] mt-1.5">Sagrada Ceremonia</h5>
+                        <p class="text-[11px] text-slate-500 leading-tight">Misa de bautizo formal en la Parroquia de San Pedro.</p>
+                    </div>
+                    <!-- Evento 2 -->
+                    <div class="relative pl-6">
+                        <div class="absolute -left-[6px] top-1 bg-white border-2 border-slate-300 w-3 h-3 rounded-full"></div>
+                        <span class="text-[11px] font-bold bg-white text-[#4a6572] border border-slate-200/40 px-2 py-0.5 rounded-md shadow-sm">01:30 PM</span>
+                        <h5 class="font-bold text-sm text-[#233946] mt-1.5">Sesión Fotográfica</h5>
+                        <p class="text-[11px] text-slate-500 leading-tight">Fotografías con familiares, padrinos e invitados.</p>
+                    </div>
+                    <!-- Evento 3 -->
+                    <div class="relative pl-6">
+                        <div class="absolute -left-[6px] top-1 bg-white border-2 border-[#e5c158] w-3 h-3 rounded-full"></div>
+                        <span class="text-[11px] font-bold bg-white text-[#4a6572] border border-slate-200/40 px-2 py-0.5 rounded-md shadow-sm">02:30 PM</span>
+                        <h5 class="font-bold text-sm text-[#233946] mt-1.5">Recepción</h5>
+
+                        <p class="text-[11px] text-slate-500 leading-tight">Banquete Familiar</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SECCIÓN: TARJETA CEREMONIA RELIGIOSA -->
+            <div class="bg-[#f0f5f9] border border-slate-200/80 rounded-2xl p-5 text-center relative shadow-sm">
+                <div class="text-xl mb-1">⛪</div>
+                <h4 class="font-serif text-base font-bold text-[#233946] mb-2">Ceremonia Religiosa</h4>
+                <div class="text-xs text-slate-600 space-y-1">
+                    <p class="font-medium">Hora: <span class="bg-white font-bold border border-slate-200 px-2 py-0.5 rounded ml-1 text-sm text-slate-800">12:00 PM</span></p>
+                    <p class="font-bold text-[#233946] pt-1">Parroquia de San Pedro</p>
+                    <p class="text-slate-400 text-[11px]">Riva Palacio s/n, Col. Centro, C.P. 76600, Tolimán, Qro.</p>
+                </div>
+            </div>
+
+            <!-- SECCIÓN: TARJETA RECEPCIÓN -->
+            <div class="bg-[#f0f5f9] border border-slate-200/80 rounded-2xl p-5 text-center relative shadow-sm">
+                <div class="text-xl mb-1 anim-float" style="animation-duration: 4s;">🎈</div>
+
+                <h4 class="font-serif text-base font-bold text-[#233946] mb-2">Recepción</h4>
+                <div class="text-xs text-slate-600 space-y-1">
+                    <p class="font-medium">Hora: <span class="bg-white font-bold border border-slate-200 px-2 py-0.5 rounded ml-1 text-sm text-slate-800">02:30 PM</span></p>
+                    <p class="font-bold text-[#233946] pt-1">Salón de Eventos / Jardín Familiar</p>
+                    <p class="text-slate-400 text-[11px]">Horno de cal, Tolimán, Querétaro</p>
+                </div>
+            </div>
+
+            <!-- SECCIÓN: UBICACIÓN DE LA IGLESIA MAPA -->
+            <div class="bg-[#f0f5f9] border border-slate-200/80 rounded-2xl p-4 space-y-3 relative shadow-sm">
+                <div class="flex justify-between items-center px-1 text-xs">
+                    <div class="flex items-center gap-1 font-semibold text-slate-700">
+                        <span>📍</span> Ubicación de la Iglesia
+                    </div>
+                    <span class="text-[10px] tracking-wider text-slate-400 font-bold uppercase">Google Maps</span>
+                </div>
+                <!-- Contenedor del Iframe de Google Maps -->
+                <div class="rounded-xl overflow-hidden border border-slate-200 bg-white relative">
+                    <iframe width="100%" height="200" frameborder="0" style="border:0;" referrerpolicy="no-referrer-when-downgrade" loading="lazy" src="https://www.google.com/maps/embed/v1/place?key=__CODING_CANVAS_MAPS_EMBED_API_KEY__&q=Parroquia+San+Pedro+Toliman+Queretaro" allowfullscreen></iframe>
+
+                </div>
+                <!-- Botón de redirección externo -->
+                <a href="https://maps.google.com/?q=Parroquia+San+Pedro+Toliman+Queretaro" target="_blank" class="block w-fit bg-white border border-slate-200 font-bold text-xs text-[#1a73e8] px-3 py-2 rounded-lg shadow-sm">
+                    Abrir en Maps ↗
+                </a>
+            </div>
+
+            <!-- SECCIÓN: CONFIRMACIÓN WHATSAPP -->
+            <div class="bg-[#f0f5f9] border border-slate-200/80 rounded-2xl p-5 text-center space-y-3 shadow-sm relative">
+                <h4 class="font-serif text-base font-bold text-[#233946] mb-1">¿Nos acompañas?</h4>
+                <p class="text-xs text-slate-500 leading-tight">Tu presencia es nuestro mejor regalo. Por favor confirma antes del 5 de enero.</p>
+                <button onclick="confirmarAsistencia()" class="w-full bg-[#465d6a] hover:bg-[#324550] text-white font-medium text-sm py-3 rounded-xl shadow-md flex items-center justify-center gap-2 transition-all">
+                    💬 Confirmar por WhatsApp
+                </button>
+            </div>
+        </div>
+        
+        <!-- SECCIÓN: PIE DE PÁGINA TOTALMENTE LIMPIO CON LA ESTRELLA INCRUSTADA EXCLUSIVAMENTE AL FINAL DE LA FRASE -->
+        <div class="bg-[#f0f5f9] py-4 text-center border-t border-slate-200/60 mt-auto relative">
+
+            <p class="font-handwritten text-2xl text-[#607d8b] inline-flex items-center justify-center gap-1.5 px-4 relative z-10">
+                ¡Te esperamos con mucha ilusión! 
+                <!-- Estrella animada incrustada directamente al final de las letras -->
+                <span class="text-amber-400 text-sm anim-sparkle inline-block select-none font-bold">✨</span>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Función interactiva de redirección a WhatsApp para confirmaciones
+        function confirmarAsistencia() {
+            const mensaje = encodeURIComponent("¡Hola! Confirmo con mucha alegría nuestra asistencia al bautizo de Eithan André Martínez Reséndiz el próximo sábado 16 de enero de 2027. 👼✨");
+            window.open(`https://wa.me{mensaje}`, '_blank');
+        }
+
+        // Script del Conteo Regresivo Real apuntando al Sábado 16 de Enero de 2027
+        const fechaEvento = new Date("Jan 16, 2027 12:00:00").getTime();
+        setInterval(function() {
+            const distancia = fechaEvento - new Date().getTime();
+
+            const d = Math.floor(distancia / (1000 * 60 * 60 * 24));
+            const h = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const m = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+            const s = Math.floor((distancia % (1000 * 60)) / 1000);
+            
+            if(document.getElementById("dias")) {
+                document.getElementById("dias").innerText = d < 10 ? "0" + d : d;
+                document.getElementById("horas").innerText = h < 10 ? "0" + h : h;
+                document.getElementById("minutos").innerText = m < 10 ? "0" + m : m;
+                document.getElementById("segundos").innerText = s < 10 ? "0" + s : s;
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
+
+
