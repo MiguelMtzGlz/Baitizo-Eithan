@@ -1,4 +1,4 @@
-
+# Invitación Digital de Bautizo Interactiva - Eithan André
 
 <!DOCTYPE html>
 <html lang="es">
@@ -232,15 +232,14 @@
                 </a>
             </div>
 
-            <!-- CONFIRMACIÓN WHATSAPP - ENLACE DIRECTO NATIVO DE API GLOBAL HIPER-COMPATIBLE -->
+            <!-- CONFIRMACIÓN WHATSAPP - ELIMINAMOS INTERMEDIOS WEB. ENLACE DE PROTOCOLO DEEP LINK DIRECTO A APLICACIÓN INSTALADA -->
             <div class="bg-[#f0f5f9] border border-slate-200/80 rounded-2xl p-5 text-center space-y-3 shadow-sm relative">
                 <h4 class="font-serif text-base font-bold text-[#233946] mb-1">¿Nos acompañas?</h4>
                 <p class="text-xs text-slate-500 leading-tight">Tu presencia es nuestro mejor regalo. Por favor confirma antes del 5 de enero.</p>
                 
-                <!-- Uso directo de la API global limpia con parámetros codificados nativos sin scripts intermedios -->
-                <a href="https://whatsapp.com" 
+                <!-- Uso de protocolo whatsapp:// directo para saltarse el navegador web de iPhone por completo -->
+                <a href="whatsapp://send?phone=524462188345&text=%C2%A1Hola%21+Confirmo+con+mucha+alegr%C3%ADa+nuestra+asistencia+al+bautizo+de+Eithan+Andr%C3%A9+Mart%C3%ADnez+Res%C3%A9ndiz+para+el+s%C3%A1bado+16+de+enero+de+2027.+%E2%9C%A8" 
 
-                   target="_blank" 
                    class="block w-full bg-[#465d6a] hover:bg-[#324550] text-white font-medium text-sm py-3 rounded-xl shadow-md text-center transition-all flex items-center justify-center gap-2">
                     💬 Confirmar por WhatsApp
                 </a>
@@ -259,8 +258,8 @@
     <!-- SCRIPT AUXILIAR DE RESPALDO PARA COPIADO DE CÓDIGO -->
     <script>
         function copiarCodigoTexto() {
-
             const todoElCodigo = document.documentElement.outerHTML;
+
             const contenedorTemporal = document.createElement("textarea");
             contenedorTemporal.value = "<!DOCTYPE html>\n" + todoElCodigo;
             document.body.appendChild(contenedorTemporal);
@@ -279,8 +278,8 @@
 
         const fechaEvento = new Date("Jan 16, 2027 12:00:00").getTime();
         setInterval(function() {
-
             const distancia = fechaEvento - new Date().getTime();
+
             const d = Math.floor(distancia / (1000 * 60 * 60 * 24));
             const h = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const m = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
