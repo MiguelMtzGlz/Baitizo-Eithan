@@ -26,7 +26,7 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Cormorant+Garamond:wght@300;400;500&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Cormorant+Garamond:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
 
     <script>document.documentElement.className += ' js';</script>
 
@@ -357,6 +357,15 @@
         main > .sec .reveal { transition-delay: .7s; } main > .sec .reveal.d1 { transition-delay: .85s; } main > .sec .reveal.d2 { transition-delay: 1s; } main > .sec .reveal.d3 { transition-delay: 1.15s; }
         main > .sec.alt .banda { background: radial-gradient(50% 34% at 22% 84%, rgba(255,255,255,.13), transparent 72%), linear-gradient(200deg, #29465a 0%, #1d3a4e 55%, #16303f 100%); }
         @media (prefers-reduced-motion: reduce) { main > .sec .reveal { transition-delay: 0s !important; } }
+
+        /* ===== Tipografía del nuevo modelo: Cormorant Garamond + Montserrat + Pinyon Script ===== */
+        :root { --sans: 'Montserrat', 'Quicksand', 'Carlito', system-ui, sans-serif; --serif: 'Cormorant Garamond', 'Cormorant', 'Caladea', Georgia, serif; --hand: 'Pinyon Script', 'Snell Roundhand', 'Apple Chancery', cursive; }
+        body { font-weight: 300; }
+        .btn, .campo, .field .lbl, .err, .ayuda, .plazo, .saludo, .seg span, .chk span { font-family: var(--mont); }
+        .btn { font-weight: 500; font-size: 13px; letter-spacing: .08em; }
+        .persona, .lugar, .tarjeta-simple .t, .it-item h5, .padrino p, .cd-num, .cd-fin, .guarda .h3, .h2 { font-family: var(--cor); }
+        .cierre .frase, .y { font-family: var(--script); }
+        strong, b { font-weight: 600; }
     </style>
 </head>
 <body class="lock">
@@ -431,7 +440,7 @@
                 <span class="eyebrow reveal">Con la bendición de Dios</span>
                 <h2 class="h2 reveal d1">Mis papás te invitan</h2>
                 <div class="personas reveal d2">
-                    <p class="persona">Miguel Angel Martínez González</p>
+                    <p class="persona">Miguel Ángel Martínez González</p>
                     <span class="y" aria-hidden="true">y</span>
                     <p class="persona">María Fernanda Reséndiz Camacho</p>
                 </div>
