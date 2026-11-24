@@ -375,6 +375,16 @@
             #inicio.con-foto .pan-cta { right: auto; width: calc(94% - 75svh); }
             #inicio.con-foto .pan-in { align-self: flex-start; margin-left: max(4%, calc((94% - 75svh) / 2 - 210px)); }
         }
+
+        /* ===== Foto fija: se queda quieta y las secciones pasan por encima (como la demo) ===== */
+        #inicio.con-foto { background: none !important; background-color: #0c161e !important; clip-path: inset(0); }
+        #inicio.con-foto::before { display: none !important; }
+        .fondo-foto { position: fixed; inset: 0; z-index: 0; background-color: #0c161e; background-size: cover; background-position: center 18%; background-repeat: no-repeat; pointer-events: none; }
+        .fondo-foto::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(12,22,30,.12) 0%, rgba(12,22,30,0) 24%, rgba(12,22,30,.5) 50%, rgba(12,22,30,.86) 100%); }
+        @media (min-width: 900px) and (min-aspect-ratio: 5/4) {
+            .fondo-foto { background-size: auto 100%; background-position: right 6% top; }
+            .fondo-foto::after { background: linear-gradient(to right, #0c161e 0, #0c161e calc(94% - 75svh), rgba(12,22,30,.85) calc(94% - 75svh + 40px), rgba(12,22,30,0) calc(94% - 75svh + 150px), rgba(12,22,30,0) 94%, #0c161e 100%); }
+        }
     </style>
 </head>
 <body class="lock">
@@ -694,7 +704,8 @@
             var bg = 'url("' + CONFIG.portada.replace(/"/g, '') + '")';
             var inicio = $('inicio');
             inicio.classList.add('con-foto');
-            inicio.style.backgroundImage = bg;
+            var fondo = document.createElement('div'); fondo.className = 'fondo-foto'; fondo.setAttribute('aria-hidden', 'true'); fondo.style.backgroundImage = bg;
+            inicio.insertBefore(fondo, inicio.firstChild);
         }
 
         function setMusicaUI(sonando) {
