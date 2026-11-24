@@ -344,6 +344,19 @@
         .musica small { color: var(--gold-l); }
         /* Pantalla de presentación y secciones: aparición enfocada y línea dorada fina entre bloques */
         .sec::after { content: ''; position: absolute; left: 50%; bottom: 0; width: 1px; height: 28px; background: linear-gradient(to bottom, rgba(229,193,88,.5), transparent); }
+
+        /* ===== Cada sección como pantalla completa con apertura desde el centro ===== */
+        main > .sec, main > .cierre { min-height: 100vh; min-height: 100svh; display: flex; flex-direction: column; justify-content: center; overflow: hidden; isolation: isolate; }
+        main > .sec > .wrap, main > .cierre > .wrap { position: relative; z-index: 2; }
+        main > .sec::before, main > .cierre::before { content: ''; position: absolute; inset: 16px; z-index: 1; border: 1px solid rgba(229,193,88,.34); pointer-events: none; opacity: 0; transition: opacity 1.2s ease .4s; }
+        .js main > .sec::after { display: none; }
+        .js main > .sec .banda, .js main > .cierre .banda { position: absolute; inset: 0; z-index: 0; pointer-events: none; background: radial-gradient(55% 38% at 72% 22%, rgba(255,255,255,.16), transparent 72%), linear-gradient(160deg, #1a3346 0%, #2f5269 52%, #223f52 100%); clip-path: inset(50% 0 50% 0); transition: clip-path 1.4s cubic-bezier(.65,0,.35,1); }
+        .js main > .sec.vista .banda, .js main > .cierre.vista .banda { clip-path: inset(0 0 0 0); }
+        .vista::before { opacity: 1 !important; }
+        @media (prefers-reduced-motion: reduce) { .js main > .sec .banda, .js main > .cierre .banda { clip-path: inset(0); transition: none; } main > .sec::before { transition: none; opacity: 1; } }
+        main > .sec .reveal { transition-delay: .7s; } main > .sec .reveal.d1 { transition-delay: .85s; } main > .sec .reveal.d2 { transition-delay: 1s; } main > .sec .reveal.d3 { transition-delay: 1.15s; }
+        main > .sec.alt .banda { background: radial-gradient(50% 34% at 22% 84%, rgba(255,255,255,.13), transparent 72%), linear-gradient(200deg, #29465a 0%, #1d3a4e 55%, #16303f 100%); }
+        @media (prefers-reduced-motion: reduce) { main > .sec .reveal { transition-delay: 0s !important; } }
     </style>
 </head>
 <body class="lock">
@@ -902,6 +915,16 @@
         actualizarContador();
         setInterval(actualizarContador, 1000);
     })();
-    </script>
+    
+        // Cada sección se "abre" desde el centro al llegar a ella
+        (function () {
+            var secs = Array.prototype.slice.call(document.querySelectorAll('main > .sec, main > .cierre'));
+            secs.forEach(function (el) { var b = document.createElement('div'); b.className = 'banda'; b.setAttribute('aria-hidden', 'true'); el.insertBefore(b, el.firstChild); });
+            if (!('IntersectionObserver' in window)) { secs.forEach(function (el) { el.classList.add('vista'); }); return; }
+            var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) e.target.classList.add('vista'); }); }, { threshold: 0.25 });
+            secs.forEach(function (el) { io.observe(el); });
+            setTimeout(function () { secs.forEach(function (el) { el.classList.add('vista'); }); }, 8000);
+        })();
+</script>
 </body>
 </html>
