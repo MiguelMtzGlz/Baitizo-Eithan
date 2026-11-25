@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bautizo de Eithan André · 16 de enero de 2027</title>
     <meta name="description" content="Sábado 16 de enero de 2027 · Parroquia de San Pedro, Tolimán, Qro. Abre la invitación para ver la ubicación y confirmar tu asistencia.">
-    <meta name="theme-color" content="#f1f7fc">
+    <meta name="theme-color" content="#2d6a9f">
 
     <!-- VISTA PREVIA AL COMPARTIR (WhatsApp, Facebook, etc.) -->
     <!-- IMPORTANTE: og-preview.jpg debe estar subido en la misma carpeta que este index.html -->
@@ -488,6 +488,49 @@
         .pantalla { background-image: radial-gradient(120% 60% at 50% 0%, rgba(255,255,255,.24), transparent 62%), linear-gradient(165deg, #1f5a8c 0%, #3b86bf 52%, #8cc0e6 100%); }
 
         @media (min-width: 900px) and (min-aspect-ratio: 5/4) { #inicio.con-foto { padding-bottom: 130px; } }
+
+        /* ===== TODO EN EL AZUL DE LA PORTADA ===== */
+        :root { --bg: #2d6a9f; --navy: #fff; --slate: rgba(255,255,255,.82); --muted: rgba(255,255,255,.82); --soft: rgba(255,255,255,.68); --line: rgba(229,193,88,.4); --panel: #2d6a9f; --gold-text: #f0d98a; --btn: #2d6a9f; --btn-hover: #3a7db4; }
+        body { background: #2d6a9f; color: #fff; }
+        .sec, .sec.alt { background: #2d6a9f; }
+        .sec.alt { background: #3a7db4; }
+        .js main > .sec .banda { background: radial-gradient(55% 38% at 72% 22%, rgba(255,255,255,.24), transparent 72%), radial-gradient(50% 34% at 22% 84%, rgba(255,255,255,.16), transparent 72%), linear-gradient(160deg, #1f5a8c 0%, #4a94c9 52%, #2d6a9f 100%); }
+        .js main > .sec.alt .banda { background: radial-gradient(50% 34% at 25% 20%, rgba(255,255,255,.2), transparent 72%), radial-gradient(55% 38% at 78% 86%, rgba(255,255,255,.14), transparent 72%), linear-gradient(200deg, #2d6a9f 0%, #4a94c9 48%, #1f5a8c 100%); }
+        main > .sec::before, main > .cierre::before { border-color: rgba(229,193,88,.45); }
+        .eyebrow, .cd-unit, .it-hora, .hora, .y, .padrino .ico { color: #f0d98a; }
+        .h2, .persona, .lugar, .tarjeta-simple .t, .it-item h5, .cd-num, .cd-fin, .padrino p, .guarda .h3, .field .lbl { color: #fff; }
+        .cd-fin { color: #f0d98a; }
+        .lead, .muted, .it-item p, .cita { color: rgba(255,255,255,.85); }
+        .orn { color: #f0d98a; }
+        .direccion, .ayuda, .plazo { color: rgba(255,255,255,.72); }
+        .btn-light { background: rgba(255,255,255,.12); border-color: rgba(255,255,255,.55); color: #fff; }
+        .btn-light:hover { background: rgba(255,255,255,.24); }
+        .btn-primary { background: rgba(255,255,255,.14); border-color: rgba(240,217,138,.9); color: #f0d98a; }
+        .btn-primary:hover { background: rgba(240,217,138,.22); }
+        .btn:focus-visible, .campo:focus-visible, .seg input:focus-visible + span, .chk input:focus-visible + span, .musica:focus-visible { outline-color: rgba(255,255,255,.85); }
+        .cd-box, .lugar-card, .padrino, .tarjeta-simple, .rsvp-card { background: rgba(255,255,255,.12); border-color: rgba(229,193,88,.5); box-shadow: none; -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px); }
+        .hora { background: transparent; border-color: rgba(240,217,138,.7); }
+        .timeline::before { background: rgba(240,217,138,.5); }
+        .it-dot { background: #2d6a9f; border-color: #f0d98a; } .it-dot.off { border-color: rgba(255,255,255,.55); }
+        .galeria img { background: #3a7db4; }
+        .seg span, .chk span, .campo { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.45); color: #fff; }
+        .campo::placeholder { color: rgba(255,255,255,.55); }
+        .campo option { color: #1b3a57; }
+        .seg input:checked + span { background: rgba(240,217,138,.25); border-color: #f0d98a; color: #fff; }
+        .chk span::before { background: transparent; border-color: rgba(255,255,255,.7); }
+        .chk input:checked + span { background: rgba(240,217,138,.2); border-color: #f0d98a; }
+        .chk input:checked + span::before { background-color: #e5c158; border-color: #e5c158; }
+        .campo.error { border-color: #ffb4ab; } .err { color: #ffd0cb; }
+        .codigo { border-color: #f0d98a; color: #f0d98a; }
+        .musica { background: rgba(255,255,255,.94); border-color: rgba(255,255,255,.7); }
+        .musica .m-ico, .musica b { color: #1b3a57; } .musica small { color: #8f6f14; }
+        /* Bloques más profundos para dar ritmo, mismo azul */
+        .guarda { background: rgba(14,40,68,.38); }
+        .guarda .eyebrow { color: #f0d98a; }
+        #padrinos, .cierre { background: linear-gradient(160deg, #1a4d7a 0%, #2d6a9f 100%); }
+        #padrinos .banda { background: radial-gradient(55% 38% at 72% 22%, rgba(255,255,255,.2), transparent 72%), linear-gradient(160deg, #1a4d7a, #3a7db4) !important; }
+        #padrinos .padrino { background: rgba(255,255,255,.1); }
+        .cierre .frase { color: #fff; } .cierre .peque { color: rgba(255,255,255,.75); }
     </style>
 </head>
 <body class="lock">
