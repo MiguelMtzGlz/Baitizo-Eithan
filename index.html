@@ -579,6 +579,161 @@
             .timeline::before { transform: none; transition: none; }
             .fd-chispas, .cierre::after, #btn-wa::after { display: none; } .cierre .orn, .cd-num.tic { animation: none; }
         }
+
+        /* ===== PARIDAD CON LA DEMO ===== */
+        /* Portada: mitades con tono distinto (costura al centro), nombre más grande, contenido un poco más abajo */
+        #portada::before { content: ''; position: absolute; left: 0; right: 0; top: 50%; bottom: 0; background: rgba(10,40,76,.18); z-index: 0; pointer-events: none; }
+        #portada .pan-nombre { font-size: clamp(70px, 24vw, 120px); }
+        #portada .pan-in { transform: translateY(14px); }
+        /* Divisor ✦ con líneas arriba de cada título */
+        main > .sec .wrap > .eyebrow:first-child::before { content: '✦'; display: block; font-size: 13px; letter-spacing: 0; text-indent: 0; margin: 0 auto 16px; color: #f0d98a; }
+        /* Ceremonia / recepción: hora grande dorada sin cápsula, botón pequeño rectangular */
+        .hora { border: 0; padding: 0; background: none; font-family: var(--cor); font-weight: 400; font-size: 34px; letter-spacing: .14em; text-indent: .14em; color: #f0d98a; }
+        .lugar-card .btn-light, .tarjeta-simple .btn-light { border-radius: 0; font-size: 11px; letter-spacing: .22em; text-transform: uppercase; padding: 12px 22px; background: transparent; }
+        /* Padrinos: nombres simples en columna con ✦ entre ellos, sin cajas */
+        #padrinos .padrinos { display: block; max-width: 360px; margin: 26px auto 0; }
+        #padrinos .padrino { background: none !important; border: 0 !important; backdrop-filter: none; -webkit-backdrop-filter: none; padding: 6px 0 22px; position: relative; }
+        #padrinos .padrino:not(:last-child)::after { content: '✦'; display: block; margin-top: 18px; font-size: 11px; color: #f0d98a; }
+        #padrinos .padrino .ico { display: none; }
+        #padrinos .padrino p { font-family: var(--cor); font-weight: 400; font-size: 30px; letter-spacing: .06em; }
+        #padrinos .h2 { font-family: var(--script); font-weight: 400; font-size: 52px; line-height: 1.05; }
+        /* Bloque de cita sobre azul profundo */
+        #cita-bloque { background: linear-gradient(160deg, #173f66, #24598a); text-align: center; }
+        #cita-bloque .banda { background: linear-gradient(160deg, #173f66, #24598a) !important; }
+        .cita-grande { font-family: var(--cor); font-weight: 400; font-style: italic; font-size: 28px; line-height: 1.35; color: #fff; max-width: 420px; margin: 20px auto 0; }
+        .cita-linea { display: block; width: 46px; height: 1px; background: rgba(240,217,138,.7); margin: 26px auto 18px; }
+        .cita-firma { font-family: var(--script); font-size: 34px; color: #f0d98a; }
+
+        /* ===== INICIO COMO LA DEMO: foto a pantalla completa, tinte parejo, texto centrado sobre la foto ===== */
+        #inicio.con-foto .pan-in > .orn-linea:first-of-type { display: flex !important; }
+        #inicio.con-foto { justify-content: center !important; padding-bottom: 120px !important; background-size: auto 112% !important; background-position: center top !important; }
+        .fondo-foto { background-size: auto 112% !important; background-position: center top !important; }
+        .fondo-foto::after { background: radial-gradient(120% 80% at 50% 45%, rgba(31,90,140,.20), rgba(18,60,104,.40) 100%), linear-gradient(to bottom, rgba(24,70,116,.30) 0%, rgba(24,70,116,.26) 45%, rgba(14,44,76,.62) 100%) !important; }
+        #inicio.con-foto .pan-nombre { font-size: clamp(70px, 24vw, 118px); text-shadow: 0 2px 22px rgba(10,40,76,.45); }
+        #inicio.con-foto .pan-de { text-shadow: 0 1px 12px rgba(10,40,76,.5); }
+        #inicio.con-foto .pan-in { margin-top: 8px; }
+        @media (min-width: 900px) and (min-aspect-ratio: 5/4) {
+            .fondo-foto { background-size: auto 100% !important; background-position: right 6% top !important; }
+            #inicio.con-foto { background-size: auto 100% !important; background-position: right 6% top !important; }
+        }
+
+        @media (min-width: 900px) and (min-aspect-ratio: 5/4) {
+            .fondo-foto::after { background: linear-gradient(to right, #0c1f35 0, #0c1f35 calc((100% - 75svh) * .94), rgba(12,31,53,.8) calc((100% - 75svh) * .94 + 45px), rgba(24,70,116,.30) calc((100% - 75svh) * .94 + 190px), rgba(24,70,116,.30) calc((100% - 75svh) * .94 + 75svh - 150px), #0c1f35 calc((100% - 75svh) * .94 + 75svh)) !important; }
+        }
+
+        /* ===== BIENVENIDA COMO LA DEMO ===== */
+        .h2-dos { font-size: 40px; line-height: 1.12; }
+        .h2-dos .h2-a { display: block; font-family: var(--cor); font-weight: 300; letter-spacing: .01em; }
+        .h2-dos .h2-b { display: block; margin-top: 4px; font-family: var(--script); font-weight: 400; font-size: 52px; line-height: 1.15; color: #f0d98a; letter-spacing: 0; }
+        #bienvenida .orn-linea { margin: 26px auto 24px; }
+        #bienvenida .orn-linea i { background: rgba(240,217,138,.6); }
+        .lead-grande { font-family: var(--cor); font-weight: 400; font-size: 21px; line-height: 1.7; color: rgba(255,255,255,.9); max-width: 440px; margin-left: auto; margin-right: auto; }
+        .tarjeta-foto { position: relative; margin: 34px auto 0; width: 100%; max-width: 420px; aspect-ratio: 4 / 5; overflow: hidden; clip-path: inset(50% 0 50% 0); transition: clip-path 1.6s cubic-bezier(.65,0,.35,1) .6s; box-shadow: 0 28px 50px -28px rgba(8,30,56,.75); }
+        #bienvenida.vista .tarjeta-foto { clip-path: inset(0); }
+        .tf-img { position: absolute; inset: 0; background-size: cover; background-position: center 30%; transform: scale(1.15); transition: transform 6s ease-out .6s; }
+        #bienvenida.vista .tf-img { transform: scale(1); }
+        .tf-num { position: absolute; top: 16px; right: 18px; font-family: var(--cor); font-size: 15px; letter-spacing: .2em; color: rgba(255,255,255,.85); text-shadow: 0 1px 8px rgba(0,0,0,.4); }
+        @media (prefers-reduced-motion: reduce) { .tarjeta-foto { clip-path: none; transition: none; } .tf-img { transform: none; transition: none; } }
+
+        /* Espacios vacíos para fotos */
+        .vacia { background: linear-gradient(160deg, rgba(255,255,255,.16), rgba(255,255,255,.05)); border: 1px dashed rgba(240,217,138,.55); }
+        .tarjeta-foto.vacia, .foto-div.vacia .fd-marco { clip-path: inset(0) !important; }
+        .vacia-txt { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-align: center; color: #fff; padding: 20px; z-index: 2; }
+        .vacia-txt span { color: #f0d98a; font-size: 22px; }
+        .vacia-txt b { font-family: var(--cor); font-weight: 500; font-size: 26px; letter-spacing: .08em; }
+        .vacia-txt small { font-family: var(--mont); font-size: 11px; letter-spacing: .12em; color: rgba(255,255,255,.7); }
+        .foto-div.vacia .fd-img, .foto-div.vacia .fd-velo, .foto-div.vacia .fd-cita { display: none; }
+        .foto-div.vacia .fd-marco { background: linear-gradient(160deg, rgba(255,255,255,.16), rgba(255,255,255,.05)); border: 1px dashed rgba(240,217,138,.55); }
+        .foto-div.vacia .fd-firma { opacity: 0; }
+
+        /* Pie de foto como la demo: nombre en caligrafía y fecha */
+        .tarjeta-foto { aspect-ratio: 3 / 4.1; }
+        .tarjeta-foto::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0; height: 34%; background: linear-gradient(to top, rgba(10,36,64,.55), transparent); pointer-events: none; }
+        .tf-pie { position: absolute; left: 26px; bottom: 24px; z-index: 3; text-align: left; opacity: 0; filter: blur(8px); transform: translateY(10px); transition: opacity 1.2s ease 1.8s, filter 1.2s ease 1.8s, transform 1.2s ease 1.8s; }
+        #bienvenida.vista .tf-pie { opacity: 1; filter: none; transform: none; }
+        .tf-nombre { display: block; font-family: var(--script); font-size: 44px; line-height: 1; color: #fff; text-shadow: 0 2px 14px rgba(0,0,0,.4); }
+        .tf-fecha { display: block; margin-top: 8px; font-family: var(--mont); font-size: 13px; font-weight: 300; letter-spacing: .34em; color: rgba(255,255,255,.85); }
+        .tarjeta-foto.vacia .tf-pie { opacity: 0; }
+        @media (prefers-reduced-motion: reduce) { .tf-pie { opacity: 1; filter: none; transform: none; transition: none; } }
+
+        /* ===== PAPÁS + GUARDA LA FECHA COMO LA DEMO ===== */
+        .personas-grande { margin-top: 26px; }
+        .personas-grande .persona { font-family: var(--cor); font-weight: 300; font-size: 36px; line-height: 1.12; letter-spacing: .01em; color: #fff; }
+        .personas-grande .y { display: block; margin: 8px 0 10px; font-family: var(--script); font-size: 44px; line-height: 1; color: #f0d98a; }
+        .guarda { position: relative; overflow: hidden; padding: 74px 24px 64px; margin-top: 56px; }
+        .guarda::before { content: ''; position: absolute; top: -160px; right: -200px; width: 560px; height: 560px; border: 1px solid rgba(255,255,255,.16); border-radius: 50%; pointer-events: none; }
+        .guarda::after { content: ''; position: absolute; bottom: -230px; left: -230px; width: 520px; height: 520px; border: 1px solid rgba(255,255,255,.1); border-radius: 50%; pointer-events: none; }
+        .guarda > * { position: relative; z-index: 1; }
+        .guarda .eyebrow { margin-bottom: 38px; }
+        .fecha-fila { display: flex; align-items: center; justify-content: center; gap: 16px; }
+        .ff-lado { flex: 1; max-width: 120px; padding: 14px 0; border-top: 1px solid rgba(255,255,255,.4); border-bottom: 1px solid rgba(255,255,255,.4); font-family: var(--mont); font-size: 12px; font-weight: 400; letter-spacing: .3em; text-indent: .3em; text-transform: uppercase; color: rgba(255,255,255,.9); }
+        .ff-num { font-family: var(--cor); font-weight: 300; font-size: 104px; line-height: .9; color: #fff; }
+        .ff-anio { margin-top: 22px; font-family: var(--mont); font-weight: 300; font-size: 15px; letter-spacing: .5em; text-indent: .5em; color: #f0d98a; }
+        .guarda .btn-row { margin-top: 22px; }
+
+        /* ===== CUENTA REGRESIVA Y LUGARES COMO LA DEMO ===== */
+        .cd-grid { gap: 0; max-width: 420px; margin-left: auto; margin-right: auto; }
+        .cd-box { background: none !important; border: 0 !important; box-shadow: none !important; -webkit-backdrop-filter: none !important; backdrop-filter: none !important; border-radius: 0; padding: 4px 0; }
+        .cd-box + .cd-box { border-left: 1px solid rgba(240,217,138,.5) !important; }
+        .cd-num { font-family: var(--cor); font-weight: 300; font-size: 54px; line-height: 1.05; color: #fff; }
+        .cd-unit { font-family: var(--mont); font-weight: 400; font-size: 10px; letter-spacing: .22em; text-transform: uppercase; color: rgba(255,255,255,.78); }
+        .cd-sub { margin-top: 34px; font-family: var(--cor); font-size: 22px; color: rgba(255,255,255,.88); }
+        #cd-label { color: rgba(255,255,255,.82); }
+        .sec-num { display: block; margin-bottom: 16px; font-family: var(--cor); font-size: 15px; letter-spacing: .34em; text-indent: .34em; color: rgba(255,255,255,.6); }
+        .icono-circ { width: 78px; height: 78px; margin: 0 auto 28px; border: 1px solid rgba(240,217,138,.65); border-radius: 50%; display: grid; place-items: center; color: #f0d98a; }
+        .icono-circ svg { width: 34px; height: 34px; }
+        #ceremonia .wrap > .eyebrow:first-child::before, #recepcion .wrap > .eyebrow:first-child::before { display: none; }
+        #ceremonia .lugar-card, #recepcion .lugar-card { background: none; border: 0; box-shadow: none; -webkit-backdrop-filter: none; backdrop-filter: none; padding: 6px 0 0; }
+        .lugar-card .lugar { margin-top: 8px; font-weight: 400; font-size: 28px; }
+        .lugar-card .direccion { margin-top: 6px; }
+        .lugar-card .hora { display: block; margin: 20px 0 10px; font-size: 38px; }
+        .desc-lugar { max-width: 330px; margin: 0 auto 26px; font-family: var(--mont); font-weight: 300; font-size: 14.5px; line-height: 1.75; color: rgba(255,255,255,.82); }
+
+        /* Afinado de ceremonia y recepción (tipografía más ligera, como la demo) */
+        #ceremonia .h2, #recepcion .h2 { font-weight: 300; font-size: 50px; line-height: 1.05; }
+        .lugar-card .lugar { font-weight: 300; font-size: 32px; line-height: 1.2; letter-spacing: .01em; }
+        .lugar-card .hora { font-weight: 300; font-size: 46px; letter-spacing: .16em; text-indent: .16em; margin: 26px 0 14px; }
+        .lugar-card .btn .pin { width: 14px; height: 14px; margin-right: 10px; vertical-align: -2px; }
+        .lugar-card .btn-light { padding: 16px 30px; display: inline-flex; width: auto; align-items: center; justify-content: center; }
+
+        /* ===== FOTO GRANDE COMO LA DEMO: de borde a borde, cita en dos líneas y número ===== */
+        .foto-div { padding: 0; background: #2d6a9f; }
+        .foto-div::before { display: none; }
+        .fd-marco { max-width: none; width: 100%; height: auto; aspect-ratio: 4 / 5; max-height: 92svh; box-shadow: none; }
+        .fd-velo { background: linear-gradient(to bottom, rgba(24,70,116,.14), rgba(14,44,76,.06) 45%, rgba(10,32,58,.55) 100%); }
+        .fd-cita { left: 14px; right: 14px; bottom: 11%; font-family: var(--script); font-size: 34px; line-height: 1.25; text-align: center; text-shadow: 0 2px 14px rgba(0,0,0,.45); }
+        .fd-cita .c1 { display: block; font-family: var(--cor); font-weight: 300; font-size: clamp(24px, 7.4vw, 36px); white-space: nowrap; letter-spacing: 0; line-height: 1.15; }
+        .fd-cita .c2 { display: block; font-family: var(--script); font-weight: 400; font-size: 46px; line-height: 1.2; }
+        .fd-num { position: absolute; right: 18px; bottom: 14px; z-index: 3; font-family: var(--cor); font-size: 13px; letter-spacing: .22em; color: rgba(255,255,255,.75); opacity: 0; transition: opacity 1.2s ease 2s; }
+        .foto-div.vista .fd-num { opacity: 1; }
+        .foto-div.vacia .fd-num { opacity: 0; }
+        @media (min-width: 640px) { .fd-marco { max-width: 560px; margin: 0 auto; } .foto-div { padding: 34px 18px; } .fd-cita .c1 { font-size: 40px; } .fd-cita .c2 { font-size: 52px; } }
+
+        /* ===== ITINERARIO COMO LA DEMO: hora a la izquierda, línea con anillos, icono + título a la derecha ===== */
+        .timeline { max-width: 400px; margin-top: 44px; }
+        .timeline::before { display: none !important; }
+        .it-item { display: grid !important; grid-template-columns: 36% 34px 1fr; column-gap: 14px; align-items: start; padding-bottom: 56px; margin-top: 0 !important; }
+        .it-item:last-child { padding-bottom: 0; }
+        .it-hora { width: auto !important; text-align: right; font-family: var(--cor) !important; font-weight: 300 !important; font-size: 30px !important; line-height: 1.1; letter-spacing: .02em; color: #f0d98a; padding-top: 2px; white-space: nowrap; }
+        .it-dot { width: 34px !important; height: 34px !important; margin: 0 !important; border: 1px solid #f0d98a !important; background: transparent !important; display: grid; place-items: center; }
+        .it-dot::before { content: ''; width: 9px; height: 9px; border-radius: 50%; background: #f0d98a; }
+        .it-dot.off { border-color: rgba(240,217,138,.6) !important; }
+        .it-item:not(:last-child)::after { content: ''; position: absolute; left: calc(36% + 14px + 17px); top: 34px; bottom: 0; width: 1px; background: rgba(240,217,138,.55); transform-origin: top; transform: scaleY(0); transition: transform 1s ease; transition-delay: calc(1.2s + var(--i, 0) * .45s); }
+        #itinerario.vista .it-item:not(:last-child)::after { transform: scaleY(1); }
+        .it-ico { display: block; width: 26px; height: 26px; margin-bottom: 8px; color: rgba(240,217,138,.85); }
+        .it-ico svg { width: 100%; height: 100%; }
+        .it-item h5 { font-family: var(--cor) !important; font-weight: 300 !important; font-size: 30px !important; line-height: 1.08; color: #fff; }
+        .it-item p { margin-top: 10px; font-family: var(--mont); font-weight: 300; font-size: 14px; line-height: 1.6; color: rgba(255,255,255,.82); }
+        @media (prefers-reduced-motion: reduce) { .it-item:not(:last-child)::after { transform: none; transition: none; } }
+
+        /* ===== PADRINOS COMO LA DEMO ===== */
+        #padrinos { position: relative; }
+        #padrinos .h2-padrinos { font-size: 68px; line-height: 1; margin-top: 14px; }
+        #padrinos .padrinos { margin-top: 44px; }
+        #padrinos .padrino { padding: 4px 0 18px; }
+        #padrinos .padrino::after { display: none !important; }
+        #padrinos .padrino p { font-weight: 300; font-size: 34px; line-height: 1.15; letter-spacing: .01em; }
+        #padrinos .banda::after { content: ''; position: absolute; top: -190px; left: 50%; width: 620px; height: 620px; margin-left: -310px; border: 1px solid rgba(255,255,255,.14); border-radius: 50%; }
     </style>
 </head>
 <body class="lock">
@@ -640,28 +795,37 @@
         <!-- ============ BIENVENIDA ============ -->
         <section class="sec" id="bienvenida">
             <div class="wrap">
-                <span class="eyebrow reveal">Bienvenidos</span>
-                <h2 class="h2 reveal d1">Hoy comienza una historia bendecida</h2>
-                <p class="lead reveal d2">Con el corazón lleno de alegría, mis papás y yo te invitamos a celebrar el sacramento del Bautismo, el primer paso de mi camino de fe. Tu presencia es nuestro mejor regalo.</p>
-                <span class="orn reveal d3" aria-hidden="true">✦ ✦ ✦</span>
+                <span class="eyebrow reveal">Un momento para siempre</span>
+                <h2 class="h2 h2-dos reveal d1"><span class="h2-a">Hoy comienza</span><span class="h2-b">una historia bendecida</span></h2>
+                <div class="orn-linea reveal d2" aria-hidden="true"><i></i><span>✦</span><i></i></div>
+                <p class="lead lead-grande reveal d2">Con el corazón lleno de alegría, queremos compartir contigo el día en que Eithan André recibirá el sacramento del Bautismo, el primer paso de su camino de fe. Tu presencia es nuestro mejor regalo.</p>
+                <figure class="tarjeta-foto reveal d3" id="foto-bienv" hidden>
+                    <div class="tf-img"></div><span class="tf-num" aria-hidden="true">01</span>
+                    <figcaption class="tf-pie"><span class="tf-nombre">Eithan André</span><span class="tf-fecha">16 · 01 · 2027</span></figcaption>
+                </figure>
             </div>
         </section>
 
         <!-- ============ PAPÁS + GUARDA LA FECHA ============ -->
         <section class="sec alt" id="papas">
             <div class="wrap">
-                <span class="eyebrow reveal">Con la bendición de Dios</span>
-                <h2 class="h2 reveal d1">Mis papás te invitan</h2>
-                <div class="personas reveal d2">
-                    <p class="persona">Miguel Ángel Martínez González</p>
-                    <span class="y" aria-hidden="true">y</span>
-                    <p class="persona">María Fernanda Reséndiz Camacho</p>
+                <span class="eyebrow reveal">Con el amor de mis papás</span>
+                <h2 class="h2 reveal d1" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Mis papás te invitan</h2>
+                <div class="personas personas-grande reveal d1">
+                    <p class="persona">María Fernanda Reséndiz</p>
+                    <span class="y" aria-hidden="true">&amp;</span>
+                    <p class="persona">Miguel Ángel Martínez</p>
                 </div>
+                <p class="lead lead-grande reveal d2" style="margin-top:34px">tenemos la alegría de invitarte a compartir uno de los momentos más especiales de nuestra familia.</p>
 
                 <div class="guarda reveal">
                     <span class="eyebrow">Guarda la fecha</span>
-                    <p class="h3">Sábado 16 de enero de 2027</p>
-                    <p class="muted" style="margin-top:8px;font-size:15px">Agrégala a tu calendario y te avisamos un día antes.</p>
+                    <p class="h3 sr-fecha" style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">Sábado 16 de enero de 2027</p>
+                    <div class="fecha-fila" aria-hidden="true">
+                        <span class="ff-lado">Sábado</span><span class="ff-num">16</span><span class="ff-lado">Enero</span>
+                    </div>
+                    <p class="ff-anio" aria-hidden="true">2027</p>
+                    <p class="muted" style="margin-top:26px;font-size:15px">Agrégala a tu calendario y te avisamos un día antes.</p>
                     <div class="btn-row">
                         <a class="btn btn-light" id="cal-google" href="#" target="_blank" rel="noopener noreferrer">📅 Google Calendar</a>
                         <a class="btn btn-light" id="cal-ics" href="#" download="bautizo-eithan-andre.ics">🍎 iPhone / Outlook</a>
@@ -673,14 +837,15 @@
         <!-- ============ CONTADOR ============ -->
         <section class="sec" aria-label="Cuenta regresiva">
             <div class="wrap">
-                <span class="eyebrow reveal" id="cd-label">Falta muy poco</span>
-                <h2 class="h2 h2-script reveal d1" id="cd-titulo">El gran día comienza en</h2>
+                <span class="eyebrow reveal" id="cd-label">Cada día estamos más cerca</span>
+                <h2 class="h2 h2-script reveal d1" id="cd-titulo">Faltan</h2>
                 <div class="cd-grid reveal d2" id="cd-grid">
                     <div class="cd-box"><span class="cd-num" id="dias">--</span><span class="cd-unit">Días</span></div>
                     <div class="cd-box"><span class="cd-num" id="horas">--</span><span class="cd-unit">Horas</span></div>
-                    <div class="cd-box"><span class="cd-num" id="minutos">--</span><span class="cd-unit">Min</span></div>
-                    <div class="cd-box"><span class="cd-num" id="segundos">--</span><span class="cd-unit">Seg</span></div>
+                    <div class="cd-box"><span class="cd-num" id="minutos">--</span><span class="cd-unit">Minutos</span></div>
+                    <div class="cd-box"><span class="cd-num" id="segundos">--</span><span class="cd-unit">Segundos</span></div>
                 </div>
+                <p class="cd-sub reveal d3" id="cd-sub">para celebrar juntos este día tan especial</p>
                 <p class="cd-fin" id="cd-fin" hidden></p>
             </div>
         </section>
@@ -688,14 +853,16 @@
         <!-- ============ CEREMONIA ============ -->
         <section class="sec alt" id="ceremonia">
             <div class="wrap">
+                <span class="sec-num reveal" aria-hidden="true">01</span>
+                <div class="icono-circ reveal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M10 4h4"/><path d="M6 21V11l6-5 6 5v10z"/><path d="M10 21v-5a2 2 0 0 1 4 0v5"/><path d="M2 21h20"/></svg></div>
                 <span class="eyebrow reveal">Ceremonia religiosa</span>
                 <h2 class="h2 reveal d1">Mi Bautizo</h2>
                 <div class="lugar-card reveal d2">
-                    <div class="icono" aria-hidden="true">⛪</div>
-                    <span class="hora">12:00 PM</span>
                     <p class="lugar">Parroquia de San Pedro</p>
                     <p class="direccion">Riva Palacio s/n, Col. Centro, C.P. 76600, Tolimán, Qro.</p>
-                    <a class="btn btn-light" href="https://maps.google.com/?q=Parroquia+de+San+Pedro+Apostol+Toliman+Queretaro" target="_blank" rel="noopener noreferrer">📍 Ver ubicación ↗</a>
+                    <span class="hora">12:00 PM</span>
+                    <p class="desc-lugar">Acompáñanos a compartir la bendición de este sacramento.</p>
+                    <a class="btn btn-light" href="https://maps.google.com/?q=Parroquia+de+San+Pedro+Apostol+Toliman+Queretaro" target="_blank" rel="noopener noreferrer"><svg class="pin" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg> Ver ubicación</a>
                 </div>
             </div>
         </section>
@@ -703,17 +870,18 @@
         <!-- ============ RECEPCIÓN ============ -->
         <section class="sec" id="recepcion">
             <div class="wrap">
-                <span class="eyebrow reveal">Recepción</span>
+                <span class="sec-num reveal" aria-hidden="true">02</span>
+                <div class="icono-circ reveal" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"><g transform="translate(1.6 0) rotate(-14 8.5 21)"><path d="M6 3h5l-.5 6a2.2 2.2 0 0 1-4 0z"/><path d="M8.5 11v8M6 21h5"/></g><g transform="translate(-1.6 0) rotate(14 15.5 21)"><path d="M13 3h5l-.5 6a2.2 2.2 0 0 1-4 0z"/><path d="M15.5 11v8M13 21h5"/></g></svg></div>
+                <span class="eyebrow reveal">Después de la ceremonia</span>
                 <h2 class="h2 reveal d1">Celebremos juntos</h2>
                 <div class="lugar-card reveal d2">
-                    <div class="icono anim-float" aria-hidden="true">🎈</div>
-                    <span class="hora">02:30 PM</span>
                     <!-- PENDIENTE: poner aquí el nombre y la dirección exactos del lugar -->
-                    <p class="lugar">Salón de Eventos / Jardín Familiar</p>
-                    <p class="direccion">Horno de cal, Tolimán, Querétaro</p>
-                    <!-- PENDIENTE: reemplazar este enlace por el de Google Maps del lugar exacto
-                         (en Google Maps: buscar el lugar > Compartir > Copiar vínculo) -->
-                    <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=Horno+de+cal+Toliman+Queretaro" target="_blank" rel="noopener noreferrer">📍 Ver ubicación ↗</a>
+                    <p class="lugar">Horno de cal</p>
+                    <p class="direccion">Tolimán, Querétaro</p>
+                    <span class="hora">2:30 PM</span>
+                    <p class="desc-lugar">Nos encantará continuar esta celebración contigo.</p>
+                    <!-- PENDIENTE: reemplazar el enlace de Maps por el del lugar exacto (Google Maps > Compartir > Copiar vínculo) -->
+                    <a class="btn btn-light" href="https://www.google.com/maps/search/?api=1&query=Horno+de+cal+Toliman+Queretaro" target="_blank" rel="noopener noreferrer"><svg class="pin" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg> Ver ubicación</a>
                 </div>
             </div>
         </section>
@@ -724,28 +892,29 @@
             <div class="fd-marco">
                 <div class="fd-img"></div>
                 <div class="fd-velo"></div>
-                <p class="fd-cita">Un día especial,<br>un recuerdo para toda la vida.</p>
-                <p class="fd-firma">Eithan André</p>
+                <p class="fd-cita"><span class="c1">“Un día especial, un recuerdo</span><span class="c2">para toda la vida.”</span></p>
+                <span class="fd-num" aria-hidden="true">02</span>
             </div>
             <div class="fd-chispas" aria-hidden="true"></div>
         </section>
 
         <section class="sec alt" id="itinerario">
             <div class="wrap">
-                <span class="eyebrow reveal">Itinerario</span>
-                <h2 class="h2 h2-script reveal d1">Así será nuestro día</h2>
+                <span class="eyebrow reveal">Nuestro día</span>
+                <h2 class="h2 h2-script reveal d1">Itinerario</h2>
+                <p class="lead lead-grande reveal d2">Cada momento ha sido preparado con mucho cariño.</p>
                 <div class="timeline reveal d2">
                     <div class="it-item">
                         <span class="it-hora">12:00 PM</span><span class="it-dot"></span>
-                        <div><h5>Ceremonia religiosa</h5><p>Misa de bautizo en la Parroquia de San Pedro.</p></div>
+                        <div><span class="it-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2v4M10 4h4"/><path d="M6 21V11l6-5 6 5v10z"/><path d="M10 21v-5a2 2 0 0 1 4 0v5"/><path d="M2 21h20"/></svg></span><h5>Ceremonia</h5><p>Parroquia de San Pedro</p></div>
                     </div>
                     <div class="it-item">
-                        <span class="it-hora">1:30 PM</span><span class="it-dot off"></span>
-                        <div><h5>Sesión fotográfica</h5><p>Fotografías con familiares, padrinos e invitados.</p></div>
+                        <span class="it-hora">1:30 PM</span><span class="it-dot"></span>
+                        <div><span class="it-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8h4l2-3h6l2 3h4v12H3z"/><circle cx="12" cy="13" r="3.8"/></svg></span><h5>Sesión fotográfica</h5><p>Fotografías con familiares, padrinos e invitados</p></div>
                     </div>
                     <div class="it-item">
                         <span class="it-hora">2:30 PM</span><span class="it-dot"></span>
-                        <div><h5>Recepción</h5><p>Banquete familiar en Horno de cal, Tolimán.</p></div>
+                        <div><span class="it-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="translate(1.6 0) rotate(-14 8.5 21)"><path d="M6 3h5l-.5 6a2.2 2.2 0 0 1-4 0z"/><path d="M8.5 11v8M6 21h5"/></g><g transform="translate(-1.6 0) rotate(14 15.5 21)"><path d="M13 3h5l-.5 6a2.2 2.2 0 0 1-4 0z"/><path d="M15.5 11v8M13 21h5"/></g></svg></span><h5>Recepción</h5><p>Horno de cal, Tolimán</p></div>
                     </div>
                 </div>
             </div>
@@ -754,13 +923,24 @@
         <!-- ============ PADRINOS ============ -->
         <section class="sec" id="padrinos">
             <div class="wrap">
-                <span class="eyebrow reveal">Mis padrinos</span>
-                <h2 class="h2 reveal d1">Quienes me acompañan en la fe</h2>
+                <span class="eyebrow reveal">Con la bendición de mis</span>
+                <h2 class="h2 h2-script h2-padrinos reveal d1">Padrinos</h2>
                 <div class="padrinos reveal d2">
                     <div class="padrino"><span class="ico" aria-hidden="true">✦</span><p>Marlene González</p></div>
                     <!-- PENDIENTE: agregar el apellido de Guadalupe -->
                     <div class="padrino"><span class="ico" aria-hidden="true">✦</span><p>Guadalupe</p></div>
                 </div>
+                <span class="orn reveal d3" aria-hidden="true" style="margin-top:34px">✦</span>
+            </div>
+        </section>
+
+        <!-- ============ CITA ============ -->
+        <section class="sec" id="cita-bloque">
+            <div class="wrap">
+                <span class="orn reveal" aria-hidden="true">✦</span>
+                <p class="cita-grande reveal d1">Que la luz de Dios guíe mis pasos y su amor me acompañe siempre.</p>
+                <span class="cita-linea reveal d2" aria-hidden="true"></span>
+                <p class="cita-firma reveal d2">Eithan André</p>
             </div>
         </section>
 
@@ -813,8 +993,8 @@
             <div class="fd-marco">
                 <div class="fd-img"></div>
                 <div class="fd-velo"></div>
-                <p class="fd-cita">Hoy la luz de Dios y el amor de mi familia me abrazan.</p>
-                <p class="fd-firma">Eithan André</p>
+                <p class="fd-cita"><span class="c1">“Hoy la luz de Dios y el amor</span><span class="c2">de mi familia me abrazan.”</span></p>
+                <span class="fd-num" aria-hidden="true">03</span>
             </div>
             <div class="fd-chispas" aria-hidden="true"></div>
         </section>
@@ -899,8 +1079,12 @@
             // Fotos de la galería (opcional). Súbelas a una carpeta "fotos" junto a index.html.
             // Ej: ['fotos/1.jpg', 'fotos/2.jpg', 'fotos/3.jpg']
             // Fotos grandes que separan las secciones (opcional; si se dejan vacías se usa la foto de portada)
-            fotoMedio: '',
-            fotoFinal: 'fotos/foto2.jpg',
+            // Espacios para fotos: sube cada archivo a la carpeta "fotos" con estos nombres.
+            // Mientras no exista el archivo se muestra un espacio vacío; con mostrarEspacios: false se ocultan.
+            mostrarEspacios: true,
+            fotoBienvenida: 'fotos/bienvenida.jpg',
+            fotoMedio: 'fotos/medio.jpg',
+            fotoFinal: 'fotos/final.jpg',
             fotos: [],
             // Música (opcional). Ej: 'musica.mp3'
             musica: 'musica.mp3',
@@ -1164,6 +1348,7 @@
                 $('cd-grid').hidden = true;
                 $('cd-label').hidden = true;
                 $('cd-titulo').hidden = true;
+                $('cd-sub').hidden = true;
                 $('cd-fin').hidden = false;
                 $('cd-fin').textContent = (-distancia < 12 * 3600000) ? '¡Hoy es el gran día! 🎉' : '¡Gracias por acompañarnos! 💙';
             }
@@ -1186,13 +1371,31 @@
         (function () {
             var CONFIG = window.__CFG || {}; var $ = function (id) { return document.getElementById(id); };
             // Fotos grandes de separación
-            [['foto-medio', CONFIG.fotoMedio, 'center 22%'], ['foto-final', CONFIG.fotoFinal, 'center 32%']].forEach(function (c) {
-                var sec = $(c[0]); var src = c[1] || CONFIG.portada;
-                if (!sec || !src) return;
+            [['foto-medio', CONFIG.fotoMedio, 'center 22%', 'Foto 02'], ['foto-final', CONFIG.fotoFinal, 'center 32%', 'Foto 03']].forEach(function (c) {
+                var sec = $(c[0]); var src = c[1];
+                if (!sec) return;
+                if (!src) { vacio(sec, c[3], 'fotos/' + c[0].replace('foto-', '') + '.jpg'); return; }
                 var im = new Image();
+                im.onerror = function () { vacio(sec, c[3], src); };
                 im.onload = function () { sec.querySelector('.fd-img').style.backgroundImage = 'url("' + src.replace(/"/g, '') + '")'; sec.querySelector('.fd-img').style.backgroundPosition = c[2]; sec.hidden = false; sec.removeAttribute('aria-hidden'); observar(sec); };
                 im.src = src;
             });
+            // Espacios para fotos (bienvenida, medio y final)
+            function vacio(sec, etiqueta, src) {
+                if (!CONFIG.mostrarEspacios) return;
+                sec.classList.add('vacia');
+                var t = document.createElement('div'); t.className = 'vacia-txt';
+                t.innerHTML = '<span>✦</span><b>' + etiqueta + '</b><small>' + src + '</small>';
+                var host = sec.querySelector('.fd-marco') || sec; host.appendChild(t);
+                sec.hidden = false; sec.removeAttribute('aria-hidden');
+                if (sec.classList.contains('foto-div')) observar(sec);
+            }
+            var fb = $('foto-bienv');
+            if (fb) {
+                var srcB = CONFIG.fotoBienvenida;
+                if (!srcB) { vacio(fb, 'Foto 01', 'fotos/bienvenida.jpg'); }
+                else { var ib = new Image(); ib.onload = function () { fb.querySelector('.tf-img').style.backgroundImage = 'url("' + srcB.replace(/"/g, '') + '")'; fb.hidden = false; }; ib.onerror = function () { vacio(fb, 'Foto 01', srcB); }; ib.src = srcB; }
+            }
             // Chispas
             function chispas(cont, n) {
                 if (!cont) return;
