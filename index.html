@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bautizo de Eithan André · 16 de enero de 2027</title>
     <meta name="description" content="Sábado 16 de enero de 2027 · Parroquia de San Pedro, Tolimán, Qro. Abre la invitación para ver la ubicación y confirmar tu asistencia.">
-    <meta name="theme-color" content="#0c161e">
+    <meta name="theme-color" content="#f7f4ee">
 
     <!-- VISTA PREVIA AL COMPARTIR (WhatsApp, Facebook, etc.) -->
     <!-- IMPORTANTE: og-preview.jpg debe estar subido en la misma carpeta que este index.html -->
@@ -385,6 +385,72 @@
             .fondo-foto { background-size: auto 100%; background-position: right 6% top; }
             .fondo-foto::after { background: linear-gradient(to right, #0c161e 0, #0c161e calc(94% - 75svh), rgba(12,22,30,.85) calc(94% - 75svh + 40px), rgba(12,22,30,0) calc(94% - 75svh + 150px), rgba(12,22,30,0) 94%, #0c161e 100%); }
         }
+
+        /* ===== TEMA CLARO ESTILO DEMO (crema + bloques azul marino, foto de portada con tinte) ===== */
+        :root { --bg: #f7f4ee; --navy: #233946; --slate: #4a6572; --muted: #55656f; --soft: #7b8a94; --line: rgba(35,57,70,.16); --panel: #efe9df; --gold-text: #a8862b; --btn: #233946; --btn-hover: #324f60; }
+        body { background: #f7f4ee; color: #233946; }
+        .sec, .sec.alt { background: #f7f4ee; border: 0; }
+        .sec.alt { background: #f3eee5; }
+        .eyebrow { color: #a8862b; }
+        .h2 { color: #233946; font-weight: 300; }
+        .lead { color: #55656f; }
+        .orn { color: #c9a649; }
+        .persona { color: #233946; }
+        .y { color: #a8862b; }
+        .btn-light { background: transparent; border-color: rgba(35,57,70,.45); color: #233946; }
+        .btn-light:hover { background: rgba(35,57,70,.07); }
+        .btn-primary { background: #233946; border-color: #233946; color: #fff; }
+        .btn-primary:hover { background: #324f60; }
+        .btn:focus-visible, .campo:focus-visible, .seg input:focus-visible + span, .chk input:focus-visible + span, .musica:focus-visible { outline-color: rgba(35,57,70,.55); }
+        .cd-box { background: #fff; border-color: rgba(35,57,70,.14); }
+        .cd-num { color: #233946; } .cd-unit { color: #a8862b; } .cd-fin { color: #233946; }
+        .lugar-card, .padrino, .tarjeta-simple, .rsvp-card { background: #fff; border-color: rgba(35,57,70,.14); box-shadow: 0 14px 30px -22px rgba(35,57,70,.35); -webkit-backdrop-filter: none; backdrop-filter: none; }
+        .hora { color: #a8862b; border-color: rgba(168,134,43,.55); }
+        .lugar, .tarjeta-simple .t { color: #233946; }
+        .direccion { color: #6b7a84; }
+        .timeline::before { background: rgba(35,57,70,.22); }
+        .it-hora { color: #a8862b; }
+        .it-dot { background: #f7f4ee; border-color: #c9a649; } .it-dot.off { border-color: rgba(35,57,70,.35); }
+        .it-item h5 { color: #233946; } .it-item p { color: #5f6f79; }
+        .galeria img { background: #e8e1d5; }
+        .cita { color: #4a6572; }
+        .seg span, .chk span, .campo { background: #fff; border-color: rgba(35,57,70,.25); color: #233946; }
+        .campo::placeholder { color: rgba(35,57,70,.4); }
+        .seg input:checked + span { background: #233946; border-color: #233946; color: #fff; }
+        .chk span::before { border-color: rgba(35,57,70,.4); }
+        .chk input:checked + span { background: rgba(35,57,70,.06); border-color: #233946; }
+        .chk input:checked + span::before { background-color: #233946; border-color: #233946; }
+        .field .lbl { color: #233946; }
+        .campo.error { border-color: #b42318; } .err { color: #b42318; }
+        .ayuda, .plazo { color: #6b7a84; }
+        .codigo { border-color: #a8862b; color: #a8862b; }
+        .musica { background: rgba(255,255,255,.92); border-color: rgba(35,57,70,.25); }
+        .musica .m-ico, .musica b { color: #233946; } .musica small { color: #a8862b; }
+        main > .sec::before, main > .cierre::before { border-color: rgba(35,57,70,.16); }
+        .sec::after { display: none; }
+        .js main > .sec .banda { background: linear-gradient(180deg, #ece5d8 0%, #f7f4ee 100%); }
+        .js main > .sec.alt .banda { background: linear-gradient(180deg, #e6dece 0%, #f3eee5 100%); }
+        /* Bloques azul marino (como los bloques de color de la demo) */
+        .guarda { margin: 40px -24px 0; padding: 44px 24px; border: 0; background: linear-gradient(160deg, #1a3346, #2f5269); color: #fff; }
+        .guarda .eyebrow { color: #e9cd7a; } .guarda .h3 { color: #fff; } .guarda .muted { color: rgba(255,255,255,.75); }
+        .guarda .btn-light { border-color: rgba(255,255,255,.5); color: #fff; } .guarda .btn-light:hover { background: rgba(255,255,255,.14); }
+        #padrinos { background: linear-gradient(160deg, #1a3346, #2f5269); color: #fff; }
+        #padrinos .banda { background: radial-gradient(55% 38% at 72% 22%, rgba(255,255,255,.14), transparent 72%), linear-gradient(160deg, #1a3346, #2f5269) !important; }
+        #padrinos::before { border-color: rgba(229,193,88,.4); }
+        #padrinos .eyebrow { color: #e9cd7a; } #padrinos .h2 { color: #fff; }
+        #padrinos .padrino { background: rgba(255,255,255,.07); border-color: rgba(229,193,88,.35); box-shadow: none; }
+        #padrinos .padrino p { color: #fff; } #padrinos .padrino .ico { color: #e9cd7a; }
+        .cierre { background: linear-gradient(160deg, #1a3346, #2f5269); border: 0; }
+        .cierre .frase { color: #fff; } .cierre .peque { color: rgba(255,255,255,.65); }
+        .cierre::before { border-color: rgba(229,193,88,.4) !important; }
+        /* Foto de portada con tinte azul uniforme (como el tinte de la demo) */
+        .fondo-foto::after { background: linear-gradient(to bottom, rgba(26,51,70,.30) 0%, rgba(26,51,70,.26) 24%, rgba(20,40,56,.55) 52%, rgba(14,28,40,.88) 100%); }
+        @media (min-width: 900px) and (min-aspect-ratio: 5/4) {
+            .fondo-foto::after { background: linear-gradient(to right, #0c161e 0, #0c161e calc(94% - 75svh), rgba(12,22,30,.85) calc(94% - 75svh + 40px), rgba(26,51,70,.28) calc(94% - 75svh + 150px), rgba(26,51,70,.28) 94%, #0c161e 100%); }
+        }
+        /* Foto grande con nombre encima (primera foto de la galería) */
+        .galeria figure:first-child { position: relative; }
+        .galeria figure:first-child::after { content: 'Eithan André'; position: absolute; left: 16px; bottom: 12px; font-family: var(--script); font-size: 38px; line-height: 1; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,.45); }
     </style>
 </head>
 <body class="lock">
@@ -683,7 +749,7 @@
             // Ej: ['fotos/1.jpg', 'fotos/2.jpg', 'fotos/3.jpg']
             fotos: [],
             // Música (opcional). Ej: 'musica.mp3'
-            musica: '',
+            musica: 'musica.mp3',
             // Código de vestimenta (opcional). Ej: { titulo: 'Formal', texto: 'Tonos claros y suaves.' }
             vestimenta: { titulo: '', texto: '' },
             // Mesa de regalos (opcional). Ej: 'https://...'
