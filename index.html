@@ -598,8 +598,6 @@
         #padrinos .padrino p { font-family: var(--cor); font-weight: 400; font-size: 30px; letter-spacing: .06em; }
         #padrinos .h2 { font-family: var(--script); font-weight: 400; font-size: 52px; line-height: 1.05; }
         /* Bloque de cita sobre azul profundo */
-        #cita-bloque { background: linear-gradient(160deg, #173f66, #24598a); text-align: center; }
-        #cita-bloque .banda { background: linear-gradient(160deg, #173f66, #24598a) !important; }
         .cita-grande { font-family: var(--cor); font-weight: 400; font-style: italic; font-size: 28px; line-height: 1.35; color: #fff; max-width: 420px; margin: 20px auto 0; }
         .cita-linea { display: block; width: 46px; height: 1px; background: rgba(240,217,138,.7); margin: 26px auto 18px; }
         .cita-firma { font-family: var(--script); font-size: 34px; color: #f0d98a; }
@@ -734,6 +732,109 @@
         #padrinos .padrino::after { display: none !important; }
         #padrinos .padrino p { font-weight: 300; font-size: 34px; line-height: 1.15; letter-spacing: .01em; }
         #padrinos .banda::after { content: ''; position: absolute; top: -190px; left: 50%; width: 620px; height: 620px; margin-left: -310px; border: 1px solid rgba(255,255,255,.14); border-radius: 50%; }
+
+        /* ===== Pequeños momentos (estilo demo) ===== */
+        #galeria .gal-nombre { font-family: var(--script); font-weight: 400; font-size: clamp(54px, 17vw, 84px); line-height: 1.05; color: #fff; margin-top: 6px; }
+        #galeria .galeria figure { position: relative; margin: 0; }
+        #galeria .galeria figure::after { content: none !important; }
+        #galeria .galeria figure.vacia { aspect-ratio: 4 / 5; border-radius: 18px; overflow: hidden; }
+        #galeria .galeria figure.vacia:first-child, #galeria .galeria figure.vacia:last-child:nth-child(even) { aspect-ratio: 4 / 3; }
+        .cita-tarjeta { position: relative; overflow: hidden; margin: 44px 0 0; padding: 46px 26px 40px; border-radius: 22px; text-align: center; background: linear-gradient(145deg, #173f66, #2f78b0); border: 1px solid rgba(240,217,138,.28); box-shadow: 0 18px 40px rgba(10,35,60,.35); }
+        .cita-tarjeta .ct-circ { position: absolute; top: -34px; right: -34px; width: 110px; height: 110px; border-radius: 50%; border: 1px solid rgba(240,217,138,.45); }
+        .cita-tarjeta .cita-grande { margin-top: 16px; }
+
+        /* ===== Código de vestimenta (estilo demo) ===== */
+        #vestimenta .wrap { position: relative; text-align: center; }
+        #vestimenta .vt-arco { position: absolute; top: -90px; right: -150px; width: 320px; height: 320px; border-radius: 50%; border: 1px solid rgba(240,217,138,.3); pointer-events: none; }
+        #vestimenta .vt-ico { display: inline-flex; align-items: center; justify-content: center; width: 74px; height: 74px; border-radius: 50%; border: 1px solid rgba(240,217,138,.6); color: #f0d98a; margin-bottom: 26px; }
+        #vestimenta .vt-titulo { font-family: var(--cor); font-weight: 300; font-size: clamp(52px, 16vw, 76px); line-height: 1.05; color: #fff; }
+        .vt-tarjeta { margin: 34px 0 0; padding: 36px 22px 32px; background: linear-gradient(160deg, rgba(255,255,255,.16), rgba(255,255,255,.06)); border: 1px solid rgba(240,217,138,.3); box-shadow: 0 14px 34px rgba(10,35,60,.28); }
+        .vt-et { display: block; font-family: var(--mont); font-size: 12px; letter-spacing: .28em; text-transform: uppercase; color: #f0d98a; }
+        .vt-sub { font-family: var(--cor); font-size: 30px; font-weight: 400; color: #fff; margin: 12px 0 22px; }
+        .vt-colores { display: flex; justify-content: center; gap: 12px; }
+        .vt-colores i { width: 38px; height: 38px; border-radius: 50%; border: 3px solid rgba(255,255,255,.85); box-shadow: 0 3px 10px rgba(0,0,0,.2); }
+        .vt-nota { margin-top: 22px; font-family: var(--mont); font-size: 13px; letter-spacing: .12em; color: rgba(255,255,255,.8); }
+
+        /* ===== Confirmación (estilo demo) ===== */
+        #confirmar { background: #173f66; }
+        #confirmar .banda { background: linear-gradient(180deg, #1f5a8c 0%, #173f66 55%, #112f4d 100%) !important; }
+        #confirmar .wrap { text-align: center; }
+        .orn-linea { display: flex; align-items: center; justify-content: center; gap: 14px; color: #f0d98a; margin: 0 auto 26px; }
+        .orn-linea i { display: block; width: 62px; height: 1px; background: rgba(240,217,138,.65); }
+        .orn-linea span { font-size: 16px; }
+        #confirmar .rsvp-h2 { font-family: var(--script); font-weight: 400; font-size: clamp(54px, 17vw, 84px); line-height: 1.1; color: #fff; margin-top: 8px; }
+        #confirmar .rsvp-card { background: #f6f9fc; border: 1px solid rgba(240,217,138,.5); border-radius: 4px; padding: 34px 20px 28px; box-shadow: 0 18px 40px rgba(5,20,40,.35); -webkit-backdrop-filter: none; backdrop-filter: none; color: #1b3a57; }
+        .orn-linea.oscuro { color: #b99a4a; } .orn-linea.oscuro i { background: rgba(185,154,74,.6); }
+        .rc-eyebrow { color: #b08d3c !important; }
+        .rc-nombre { font-family: var(--cor); font-weight: 400; font-size: clamp(30px, 9vw, 40px); line-height: 1.15; color: #1f5a8c; margin: 10px 0 14px; }
+        .rc-lugares { font-family: var(--mont); font-size: 15px; color: #3c5a74; margin-bottom: 18px; }
+        .rc-lugares strong { color: #1f5a8c; font-weight: 600; }
+        .rc-aviso { display: flex; gap: 14px; text-align: left; align-items: flex-start; background: #e6f0f9; padding: 16px 16px; margin: 6px 0 22px; }
+        .rc-aviso b { display: block; font-family: var(--cor); font-weight: 500; font-size: 19px; color: #1f5a8c; }
+        .rc-aviso p { font-family: var(--mont); font-size: 14px; line-height: 1.5; color: #4a6680; margin-top: 4px; }
+        .rc-check { flex: none; width: 32px; height: 32px; border-radius: 50%; background: #1f5a8c; display: inline-flex; align-items: center; justify-content: center; }
+        #confirmar .rsvp-card form { text-align: left; }
+        #confirmar .rsvp-card .lbl, #confirmar .rsvp-card .ayuda { color: #1f5a8c; }
+        #confirmar .rsvp-card .seg span, #confirmar .rsvp-card .chk span, #confirmar .rsvp-card .campo { background: #fff; color: #1b3a57; border-color: rgba(31,90,140,.3); }
+        #confirmar .rsvp-card .seg input:checked + span { background: #1f5a8c; color: #fff; border-color: #1f5a8c; }
+        #confirmar .rsvp-card .chk span::before { border-color: rgba(31,90,140,.5); }
+        #confirmar .rsvp-card .err { color: #b3261e; }
+
+        #confirmar .rc-nombre, #confirmar .rc-lugares, #confirmar .rc-eyebrow { text-align: center; display: block; }
+        #confirmar .rsvp-card .btn-primary { background: #1f5a8c; color: #fff; border: 1px solid #1f5a8c; box-shadow: 0 10px 22px -10px rgba(31,90,140,.7); }
+        #confirmar .rsvp-card .btn-primary:hover { background: #174a75; }
+        #confirmar .rsvp-card .chk input:checked + span::before { background-color: #1f5a8c; border-color: #1f5a8c; }
+        #confirmar .rsvp-card .chk input:checked + span { background: rgba(31,90,140,.08); border-color: #1f5a8c; }
+
+        /* ===== Tu lugar (estilo demo) ===== */
+        #tu-lugar { background: #dcebf7; }
+        #tu-lugar .banda { background: linear-gradient(180deg, #eaf3fb, #d3e6f5) !important; }
+        #tu-lugar .wrap { text-align: center; }
+        #tu-lugar .eyebrow { color: #a98532; }
+        #tu-lugar .lugar-h2 { font-family: var(--script); font-weight: 400; font-size: clamp(54px, 17vw, 80px); color: #1f5a8c; line-height: 1.1; }
+        #tu-lugar .lead { color: #3c5a74 !important; }
+        .mesa-marco { margin-top: 34px; padding: 10px; background: #fff; border: 1px solid rgba(240,217,138,.9); box-shadow: 0 22px 44px -20px rgba(31,90,140,.45); }
+        .mesa-int { padding: 34px 18px 32px; border: 1px solid rgba(185,154,74,.45); background: linear-gradient(180deg, #fff, #f3f8fc); }
+        .mesa-fam { display: block; font-family: var(--mont); font-size: 13px; letter-spacing: .22em; text-transform: uppercase; color: #a98532; }
+        .mesa-fam em { font-style: normal; margin-left: 6px; }
+        .mesa-et { display: block; margin-top: 30px; font-family: var(--mont); font-size: 14px; letter-spacing: .3em; text-transform: uppercase; color: #6b869c; }
+        .mesa-num { display: block; font-family: var(--cor); font-weight: 400; font-size: 104px; line-height: 1.1; color: #1f5a8c; }
+        .mesa-lista { margin-top: 26px; padding-top: 24px; border-top: 1px solid rgba(31,90,140,.18); }
+        .mesa-lista p { font-family: var(--mont); font-size: 15px; color: #4a6680; margin: 8px 0; }
+
+        /* ===== Nuestra canción (tocadiscos) ===== */
+        #cancion { background: #dcebf7; }
+        #cancion .banda { background: linear-gradient(180deg, #d3e6f5, #eaf3fb) !important; }
+        #cancion .wrap { text-align: center; }
+        #cancion .eyebrow { color: #a98532; }
+        #cancion .cancion-h2 { font-family: var(--script); font-weight: 400; font-size: clamp(50px, 15vw, 76px); color: #1f5a8c; line-height: 1.1; }
+        #cancion .lead { color: #3c5a74 !important; }
+        .disco-escena { position: relative; width: min(100%, 340px); aspect-ratio: 1 / .8; margin: 34px auto 0; background: linear-gradient(145deg, #e8f2fa, #cfe3f3); border: 1px solid rgba(31,90,140,.18); box-shadow: 0 22px 44px -22px rgba(31,90,140,.5); overflow: hidden; }
+        .vinilo { position: absolute; left: 7%; top: 10%; width: 66%; aspect-ratio: 1; border-radius: 50%; background: repeating-radial-gradient(circle at 50% 50%, #14283b 0 3px, #223c54 3px 5px); box-shadow: 0 16px 28px -10px rgba(10,30,50,.55); display: flex; align-items: center; justify-content: center; animation: girar 4s linear infinite; animation-play-state: paused; }
+        .suena .vinilo { animation-play-state: running; }
+        .vinilo::before { content: ''; position: absolute; inset: 0; border-radius: 50%; background: conic-gradient(from 20deg, transparent 0 20%, rgba(255,255,255,.1) 25%, transparent 32% 70%, rgba(255,255,255,.1) 75%, transparent 82%); }
+        .vinilo-eti { position: relative; width: 41%; aspect-ratio: 1; border-radius: 50%; background: linear-gradient(145deg, #4a94c9, #1f5a8c); color: #fff; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+        .vinilo-eti small { font-family: var(--mont); font-size: 8px; letter-spacing: .25em; text-transform: uppercase; }
+        .vinilo-eti b { font-family: var(--script); font-weight: 400; font-size: 24px; line-height: 1.1; }
+        .vinilo-eti em { font-family: var(--mont); font-style: normal; font-size: 6px; letter-spacing: .15em; color: #f0d98a; }
+        @keyframes girar { to { transform: rotate(360deg); } }
+        .brazo-base { position: absolute; right: 9%; top: 9%; width: 13%; aspect-ratio: 1; border-radius: 50%; background: #1f5a8c; z-index: 2; }
+        .brazo { position: absolute; right: calc(9% + 6.5%); top: calc(9% + 6.5%); width: 3px; height: 56%; margin-right: -1.5px; background: #9db2c4; transform-origin: 50% 0; transform: rotate(-14deg); transition: transform 1s ease; z-index: 1; }
+        .suena .brazo { transform: rotate(10deg); }
+        .brazo i { position: absolute; bottom: -8px; left: -9px; width: 20px; height: 28px; background: #1f5a8c; }
+        .disco-btn { position: absolute; right: 8%; bottom: 8%; width: 17%; aspect-ratio: 1; border-radius: 50%; border: 0; background: #1f5a8c; color: #fff; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 3; box-shadow: 0 8px 16px -6px rgba(10,30,50,.6); }
+        .disco-btn:focus-visible { outline: 3px solid #f0d98a; outline-offset: 3px; }
+        .disco-est { margin-top: 22px; font-family: var(--mont); font-size: 13px; letter-spacing: .2em; text-transform: uppercase; color: #4a6680; }
+        @media (prefers-reduced-motion: reduce) { .vinilo { animation: none; } }
+
+        /* ===== Cierre (estilo demo) ===== */
+        .cierre .wrap { text-align: center; padding-top: 30px; padding-bottom: 30px; }
+        .cierre-et { display: block; font-family: var(--mont); font-size: 15px; letter-spacing: .38em; text-transform: uppercase; color: rgba(255,255,255,.88); }
+        .cierre-nombre { font-family: var(--script); font-size: clamp(56px, 18vw, 88px); line-height: 1.15; color: #fff; margin: 14px 0 6px; text-shadow: 0 0 28px rgba(255,255,255,.3); }
+        .cierre-fecha { font-family: var(--mont); font-size: 15px; letter-spacing: .4em; color: #f0d98a; margin-bottom: 34px; }
+        .cierre-gracias { font-family: var(--cor); font-weight: 300; font-size: 24px; line-height: 1.4; color: rgba(255,255,255,.9); max-width: 330px; margin: 0 auto 22px; }
+        .cierre .frase { font-family: var(--script); font-size: 30px; color: #f0d98a; text-shadow: none; }
+        .cierre .banda { background: radial-gradient(55% 38% at 72% 22%, rgba(255,255,255,.16), transparent 72%), linear-gradient(160deg, #1f5a8c 0%, #4a94c9 55%, #2d6a9f 100%) !important; }
     </style>
 </head>
 <body class="lock">
@@ -934,32 +1035,41 @@
             </div>
         </section>
 
-        <!-- ============ CITA ============ -->
-        <section class="sec" id="cita-bloque">
+        <!-- ============ PEQUEÑOS MOMENTOS (galería + cita) ============ -->
+        <section class="sec" id="galeria">
             <div class="wrap">
-                <span class="orn reveal" aria-hidden="true">✦</span>
-                <p class="cita-grande reveal d1">Que la luz de Dios guíe mis pasos y su amor me acompañe siempre.</p>
-                <span class="cita-linea reveal d2" aria-hidden="true"></span>
-                <p class="cita-firma reveal d2">Eithan André</p>
-            </div>
-        </section>
-
-        <!-- ============ GALERÍA (se muestra solo si hay fotos en FOTOS) ============ -->
-        <section class="sec alt" id="galeria" hidden>
-            <div class="wrap">
-                <span class="eyebrow reveal">Galería</span>
-                <h2 class="h2 reveal d1">Pequeños momentos</h2>
+                <span class="eyebrow reveal">Pequeños momentos</span>
+                <h2 class="h2 gal-nombre reveal d1">Eithan André</h2>
+                <!-- Fotos: fotos/galeria1.jpg … galeria6.jpg (o lista CONFIG.fotos) -->
                 <div class="galeria reveal d2" id="galeria-grid"></div>
-                <p class="cita reveal">“Hoy la luz de Dios y el amor de mi familia me abrazan.”</p>
+                <div class="cita-tarjeta reveal d2" id="cita-bloque">
+                    <i class="ct-circ" aria-hidden="true"></i>
+                    <span class="orn" aria-hidden="true">✦</span>
+                    <p class="cita-grande">Que la luz de Dios guíe mis pasos y su amor me acompañe siempre.</p>
+                    <span class="cita-linea" aria-hidden="true"></span>
+                    <p class="cita-firma">Eithan André</p>
+                </div>
             </div>
         </section>
 
         <!-- ============ CÓDIGO DE VESTIMENTA (se muestra solo si lo llenas en CONFIG) ============ -->
-        <section class="sec" id="vestimenta" hidden>
+        <section class="sec" id="vestimenta">
             <div class="wrap">
-                <span class="eyebrow reveal">Código de vestimenta</span>
-                <h2 class="h2 reveal d1" id="vest-titulo"></h2>
-                <p class="lead reveal d2" id="vest-texto"></p>
+                <i class="vt-arco" aria-hidden="true"></i>
+                <span class="vt-ico reveal" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" width="34" height="34" fill="currentColor"><path d="M8.5 3 3 5.5l1.6 4.2L7 8.8V20h10V8.8l2.4.9L21 5.5 15.5 3c-.5 1.4-1.9 2.3-3.5 2.3S9 4.4 8.5 3z"/></svg>
+                </span>
+                <span class="eyebrow reveal d1">Código de vestimenta</span>
+                <h2 class="h2 vt-titulo reveal d1" id="vest-titulo">Formal</h2>
+                <p class="lead reveal d2" id="vest-texto">Nos encantará verte con un look especial para celebrar juntos este día.</p>
+                <div class="vt-tarjeta reveal d3">
+                    <span class="vt-et">Vestimenta sugerida</span>
+                    <p class="vt-sub" id="vest-sub">Formal · Tonos claros</p>
+                    <div class="vt-colores" aria-hidden="true">
+                        <i style="background:#f4f1ea"></i><i style="background:#f0d98a"></i><i style="background:#a9cdea"></i><i style="background:#6fa3d0"></i>
+                    </div>
+                    <p class="vt-nota">Colores suaves, neutros y elegantes</p>
+                </div>
             </div>
         </section>
 
@@ -1001,11 +1111,20 @@
 
         <section class="sec alt" id="confirmar" aria-labelledby="rsvp-titulo">
             <div class="wrap">
-                <span class="eyebrow reveal">Confirma tu asistencia</span>
-                <h2 class="h2 reveal d1" id="rsvp-titulo">¿Nos acompañas?</h2>
-                <p class="lead reveal d2">Tu presencia es nuestro mejor regalo. Por favor confirma antes del <strong>5 de enero</strong>.</p>
+                <div class="orn-linea reveal" aria-hidden="true"><i></i><span>✦</span><i></i></div>
+                <span class="eyebrow reveal d1">Tu lugar nos importa</span>
+                <h2 class="h2 rsvp-h2 reveal d1" id="rsvp-titulo">¿Nos acompañas?</h2>
+                <p class="lead reveal d2">Hemos preparado esta invitación especialmente para ustedes. Por favor confirma antes del <strong>5 de enero</strong>.</p>
 
                 <div class="rsvp-card reveal d3">
+                    <div class="orn-linea oscuro" aria-hidden="true"><i></i><span>✦</span><i></i></div>
+                    <span class="eyebrow rc-eyebrow">Invitación personalizada</span>
+                    <p class="rc-nombre" id="rc-nombre">Invitado especial</p>
+                    <p class="rc-lugares" id="rc-lugares" hidden></p>
+                    <div class="rc-aviso" id="rc-aviso" hidden>
+                        <span class="rc-check" aria-hidden="true"><svg viewBox="0 0 16 16" width="16" height="16"><path d="M3.5 8.5l3 3 6-7" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+                        <div><b>Selecciona quiénes asistirán</b><p>Activa la casilla únicamente de cada invitado que nos acompañará.</p></div>
+                    </div>
                     <form id="rsvp-form" novalidate>
                         <fieldset class="seg">
                             <legend style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)">¿Podrás asistir?</legend>
@@ -1038,13 +1157,50 @@
             </div>
         </section>
 
+        <!-- ============ TU LUGAR (solo aparece con enlace ?mesa=8) ============ -->
+        <section class="sec" id="tu-lugar" hidden>
+            <div class="wrap">
+                <span class="eyebrow reveal">Todo listo para ti</span>
+                <h2 class="h2 lugar-h2 reveal d1">Tu lugar</h2>
+                <p class="lead reveal d2">Aquí puedes consultar tu mesa y lugar asignado.</p>
+                <div class="mesa-marco reveal d3">
+                    <div class="mesa-int">
+                        <span class="mesa-fam"><span id="mesa-fam">Invitado especial</span> <em aria-hidden="true">✦</em></span>
+                        <span class="mesa-et">Mesa</span>
+                        <span class="mesa-num" id="mesa-num">00</span>
+                        <div class="mesa-lista" id="mesa-lista"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ NUESTRA CANCIÓN ============ -->
+        <section class="sec" id="cancion">
+            <div class="wrap">
+                <span class="eyebrow reveal">La música de este día</span>
+                <h2 class="h2 cancion-h2 reveal d1">Nuestra canción</h2>
+                <p class="lead reveal d2">Hay momentos que también se recuerdan por su música.</p>
+                <div class="disco-escena reveal d3" id="disco-escena">
+                    <div class="vinilo" aria-hidden="true">
+                        <div class="vinilo-eti"><small>Eithan</small><b>André</b><em>16 · 01 · 2027</em></div>
+                    </div>
+                    <span class="brazo-base" aria-hidden="true"></span>
+                    <span class="brazo" aria-hidden="true"><i></i></span>
+                    <button type="button" class="disco-btn" id="disco-btn" aria-label="Reproducir música"><span id="disco-ico">▶</span></button>
+                </div>
+                <p class="disco-est" id="disco-est">Toca para escuchar nuestra canción</p>
+            </div>
+        </section>
+
         <!-- ============ CIERRE ============ -->
         <footer class="cierre">
             <div class="fd-chispas" aria-hidden="true"></div>
             <div class="wrap">
-                <span class="orn reveal" aria-hidden="true" style="margin:0 auto 18px">✦</span>
-                <p class="frase reveal d1">¡Te esperamos con mucha ilusión!</p>
-                <p class="peque reveal d2">Eithan André · 16 de enero de 2027</p>
+                <span class="orn reveal" aria-hidden="true" style="margin:0 auto 22px">✦</span>
+                <span class="cierre-et reveal d1">Bautizo de</span>
+                <p class="cierre-nombre reveal d2">Eithan André</p>
+                <p class="cierre-fecha reveal d3">16 · 01 · 2027</p>
+                <p class="cierre-gracias reveal d3">Gracias por formar parte de nuestra historia.</p>
             </div>
         </footer>
     </main>
@@ -1177,21 +1333,49 @@
         // Seguro: si por cualquier motivo algo no se reveló, se muestra todo tras unos segundos
         setTimeout(function () { elementos.forEach(function (el) { el.classList.add('in'); }); }, 6000);
 
+        /* ====== TOCADISCOS (sincronizado con la música) ====== */
+        (function () {
+            var esc = $('disco-escena'), btn = $('disco-btn');
+            if (!CONFIG.musica) { $('cancion').hidden = true; return; }
+            function ui() {
+                var on = !audio.paused;
+                esc.classList.toggle('suena', on);
+                $('disco-ico').textContent = on ? '⏸' : '▶';
+                btn.setAttribute('aria-label', on ? 'Pausar música' : 'Reproducir música');
+                $('disco-est').textContent = on ? 'Reproduciendo nuestra canción' : 'Toca para escuchar nuestra canción';
+                setMusicaUI(on);
+            }
+            audio.addEventListener('play', ui); audio.addEventListener('pause', ui);
+            btn.addEventListener('click', function () {
+                if (audio.paused) audio.play().catch(function () {}); else audio.pause();
+            });
+            ui();
+        })();
+
         /* ====== SECCIONES OPCIONALES ====== */
-        if (CONFIG.fotos && CONFIG.fotos.length) {
-            var grid = $('galeria-grid');
-            CONFIG.fotos.slice(0, 7).forEach(function (src) {
+        (function () {
+            var grid = $('galeria-grid'), total = 6;
+            var lista = (CONFIG.fotos && CONFIG.fotos.length) ? CONFIG.fotos : [];
+            for (var i = 0; i < total; i++) {
+                var src = lista[i] || ('fotos/galeria' + (i + 1) + '.jpg');
                 var f = document.createElement('figure');
                 var img = document.createElement('img');
-                img.src = src; img.alt = 'Foto de Eithan André'; img.loading = 'lazy';
+                img.alt = 'Foto de Eithan André'; img.loading = 'lazy';
+                (function (f, img, n) {
+                    img.onerror = function () {
+                        img.remove();
+                        if (CONFIG.mostrarEspacios === false) { f.remove(); return; }
+                        f.classList.add('vacia');
+                        f.innerHTML = '<div class="vacia-txt"><span>✦</span><b>Foto 0' + n + '</b></div>';
+                    };
+                })(f, img, i + 1);
+                img.src = src;
                 f.appendChild(img); grid.appendChild(f);
-            });
-            $('galeria').hidden = false;
-        }
+            }
+        })();
         if (CONFIG.vestimenta && (CONFIG.vestimenta.titulo || CONFIG.vestimenta.texto)) {
-            $('vest-titulo').textContent = CONFIG.vestimenta.titulo || 'Vestimenta';
-            $('vest-texto').textContent = CONFIG.vestimenta.texto || '';
-            $('vestimenta').hidden = false;
+            if (CONFIG.vestimenta.titulo) { $('vest-titulo').textContent = CONFIG.vestimenta.titulo; $('vest-sub').textContent = CONFIG.vestimenta.titulo; }
+            if (CONFIG.vestimenta.texto) $('vest-texto').textContent = CONFIG.vestimenta.texto;
         }
         if (CONFIG.regalos) {
             $('regalos-btn').href = CONFIG.regalos;
@@ -1220,7 +1404,28 @@
             $('saludo-nombre').textContent = invitado;
             $('saludo').hidden = false;
             $('rsvp-nombre').value = invitado;
+            $('rc-nombre').textContent = invitado;
         }
+        if (pases) {
+            $('rc-lugares').innerHTML = 'Hemos reservado <strong>' + pases + (pases === 1 ? ' lugar' : ' lugares') + '</strong> para ustedes.';
+            $('rc-lugares').hidden = false;
+        }
+        if (nombres.length) $('rc-aviso').hidden = false;
+        var mesa = limpiar(params.get('mesa'), 6);
+        if (mesa) {
+            var asientos = limpiar(params.get('asientos'), 100).split(',').map(function (n) { return limpiar(n, 4); });
+            $('mesa-num').textContent = /^\d$/.test(mesa) ? '0' + mesa : mesa;
+            if (invitado) $('mesa-fam').textContent = invitado;
+            var ml = $('mesa-lista');
+            nombres.forEach(function (n, i) {
+                var p = document.createElement('p');
+                p.textContent = n + (asientos[i] ? ' · Asiento ' + asientos[i] : '');
+                ml.appendChild(p);
+            });
+            if (!nombres.length) ml.hidden = true;
+            $('tu-lugar').hidden = false;
+        }
+
 
         var selPersonas = $('rsvp-personas');
         var modoNombres = nombres.length > 0;
