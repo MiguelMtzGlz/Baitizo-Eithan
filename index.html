@@ -739,7 +739,7 @@
         #galeria .galeria figure::after { content: none !important; }
         #galeria .galeria figure.vacia { aspect-ratio: 4 / 5; border-radius: 18px; overflow: hidden; }
         #galeria .galeria figure.vacia:first-child, #galeria .galeria figure.vacia:last-child:nth-child(even) { aspect-ratio: 4 / 3; }
-        .cita-tarjeta { position: relative; overflow: hidden; margin: 44px 0 0; padding: 46px 26px 40px; border-radius: 22px; text-align: center; background: linear-gradient(145deg, #173f66, #2f78b0); border: 1px solid rgba(240,217,138,.28); box-shadow: 0 18px 40px rgba(10,35,60,.35); }
+        .cita-tarjeta { position: relative; overflow: hidden; margin: 30px 0 34px; padding: 46px 26px 40px; border-radius: 22px; text-align: center; background: linear-gradient(145deg, #173f66, #2f78b0); border: 1px solid rgba(240,217,138,.28); box-shadow: 0 18px 40px rgba(10,35,60,.35); }
         .cita-tarjeta .ct-circ { position: absolute; top: -34px; right: -34px; width: 110px; height: 110px; border-radius: 50%; border: 1px solid rgba(240,217,138,.45); }
         .cita-tarjeta .cita-grande { margin-top: 16px; }
 
@@ -969,6 +969,17 @@
         </section>
 
         <!-- ============ RECEPCIÓN ============ -->
+        <!-- ============ FOTO DE SEPARACIÓN (foto-ceremonia) ============ -->
+        <section class="foto-div" id="foto-ceremonia" hidden aria-hidden="true">
+            <div class="fd-marco">
+                <div class="fd-img"></div>
+                <div class="fd-velo"></div>
+                <p class="fd-cita"><span class="c1">“Un día especial, un recuerdo</span><span class="c2">para toda la vida.”</span></p>
+                <span class="fd-num" aria-hidden="true">02</span>
+            </div>
+            <div class="fd-chispas" aria-hidden="true"></div>
+        </section>
+
         <section class="sec" id="recepcion">
             <div class="wrap">
                 <span class="sec-num reveal" aria-hidden="true">02</span>
@@ -993,8 +1004,8 @@
             <div class="fd-marco">
                 <div class="fd-img"></div>
                 <div class="fd-velo"></div>
-                <p class="fd-cita"><span class="c1">“Un día especial, un recuerdo</span><span class="c2">para toda la vida.”</span></p>
-                <span class="fd-num" aria-hidden="true">02</span>
+                <p class="fd-cita"><span class="c1">“Con la bendición de Dios</span><span class="c2">comienza su camino de fe.”</span></p>
+                <span class="fd-num" aria-hidden="true">03</span>
             </div>
             <div class="fd-chispas" aria-hidden="true"></div>
         </section>
@@ -1040,8 +1051,6 @@
             <div class="wrap">
                 <span class="eyebrow reveal">Pequeños momentos</span>
                 <h2 class="h2 gal-nombre reveal d1">Eithan André</h2>
-                <!-- Fotos: fotos/galeria1.jpg … galeria6.jpg (o lista CONFIG.fotos) -->
-                <div class="galeria reveal d2" id="galeria-grid"></div>
                 <div class="cita-tarjeta reveal d2" id="cita-bloque">
                     <i class="ct-circ" aria-hidden="true"></i>
                     <span class="orn" aria-hidden="true">✦</span>
@@ -1049,6 +1058,8 @@
                     <span class="cita-linea" aria-hidden="true"></span>
                     <p class="cita-firma">Eithan André</p>
                 </div>
+                <!-- Fotos: fotos/galeria1.jpg … galeria6.jpg (o lista CONFIG.fotos) -->
+                <div class="galeria reveal d2" id="galeria-grid"></div>
             </div>
         </section>
 
@@ -1104,7 +1115,7 @@
                 <div class="fd-img"></div>
                 <div class="fd-velo"></div>
                 <p class="fd-cita"><span class="c1">“Hoy la luz de Dios y el amor</span><span class="c2">de mi familia me abrazan.”</span></p>
-                <span class="fd-num" aria-hidden="true">03</span>
+                <span class="fd-num" aria-hidden="true">04</span>
             </div>
             <div class="fd-chispas" aria-hidden="true"></div>
         </section>
@@ -1239,6 +1250,7 @@
             // Mientras no exista el archivo se muestra un espacio vacío; con mostrarEspacios: false se ocultan.
             mostrarEspacios: true,
             fotoBienvenida: 'fotos/bienvenida.jpg',
+            fotoCeremonia: 'fotos/ceremonia.jpg',
             fotoMedio: 'fotos/medio.jpg',
             fotoFinal: 'fotos/final.jpg',
             fotos: [],
@@ -1576,7 +1588,7 @@
         (function () {
             var CONFIG = window.__CFG || {}; var $ = function (id) { return document.getElementById(id); };
             // Fotos grandes de separación
-            [['foto-medio', CONFIG.fotoMedio, 'center 22%', 'Foto 02'], ['foto-final', CONFIG.fotoFinal, 'center 32%', 'Foto 03']].forEach(function (c) {
+            [['foto-ceremonia', CONFIG.fotoCeremonia, 'center 25%', 'Foto 02'], ['foto-medio', CONFIG.fotoMedio, 'center 22%', 'Foto 03'], ['foto-final', CONFIG.fotoFinal, 'center 32%', 'Foto 04']].forEach(function (c) {
                 var sec = $(c[0]); var src = c[1];
                 if (!sec) return;
                 if (!src) { vacio(sec, c[3], 'fotos/' + c[0].replace('foto-', '') + '.jpg'); return; }
