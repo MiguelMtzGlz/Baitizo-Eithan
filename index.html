@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bautizo de Eithan André · 16 de enero de 2027</title>
     <meta name="description" content="Sábado 16 de enero de 2027 · Parroquia de San Pedro, Tolimán, Qro. Abre la invitación para ver la ubicación y confirmar tu asistencia.">
-    <meta name="theme-color" content="#f7f4ee">
+    <meta name="theme-color" content="#f1f7fc">
 
     <!-- VISTA PREVIA AL COMPARTIR (WhatsApp, Facebook, etc.) -->
     <!-- IMPORTANTE: og-preview.jpg debe estar subido en la misma carpeta que este index.html -->
@@ -377,7 +377,7 @@
         }
 
         /* ===== Foto fija: se queda quieta y las secciones pasan por encima (como la demo) ===== */
-        #inicio.con-foto { background: none !important; background-color: #0c161e !important; clip-path: inset(0); }
+        #inicio.con-foto { clip-path: inset(0); }
         #inicio.con-foto::before { display: none !important; }
         .fondo-foto { position: fixed; inset: 0; z-index: 0; background-color: #0c161e; background-size: cover; background-position: center 18%; background-repeat: no-repeat; pointer-events: none; }
         .fondo-foto::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(12,22,30,.12) 0%, rgba(12,22,30,0) 24%, rgba(12,22,30,.5) 50%, rgba(12,22,30,.86) 100%); }
@@ -451,6 +451,43 @@
         /* Foto grande con nombre encima (primera foto de la galería) */
         .galeria figure:first-child { position: relative; }
         .galeria figure:first-child::after { content: 'Eithan André'; position: absolute; left: 16px; bottom: 12px; font-family: var(--script); font-size: 38px; line-height: 1; color: #fff; text-shadow: 0 2px 12px rgba(0,0,0,.45); }
+
+        /* Respaldo de la foto en el inicio (si la capa fija no se dibuja, la foto igual se ve) */
+        #inicio.con-foto { background-color: #0c161e !important; background-size: cover !important; background-position: center 18% !important; background-repeat: no-repeat !important; -webkit-clip-path: inset(0); }
+        #inicio.con-foto > .fondo-foto { z-index: 0; }
+        @media (min-width: 900px) and (min-aspect-ratio: 5/4) { #inicio.con-foto { background-size: auto 100% !important; background-position: right 6% top !important; } }
+
+        /* ===== PALETA DE NIÑO: azul cielo, blanco y dorado ===== */
+        :root { --bg: #f1f7fc; --navy: #1b3a57; --slate: #3f6384; --muted: #4f6a82; --soft: #7690a8; --line: rgba(27,58,87,.16); --panel: #e4f0fa; --btn: #1f5a8c; --btn-hover: #2a70a8; }
+        body { background: #f1f7fc; color: #1b3a57; }
+        .sec, .sec.alt { background: #f1f7fc; }
+        .sec.alt { background: #e4f0fa; }
+        .h2, .persona, .lugar, .tarjeta-simple .t, .it-item h5, .cd-num, .cd-fin, .field .lbl { color: #1b3a57; }
+        .lead, .muted { color: #4f6a82; }
+        .btn-light { border-color: rgba(31,90,140,.5); color: #1b3a57; }
+        .btn-light:hover { background: rgba(31,90,140,.08); }
+        .btn-primary { background: #1f5a8c; border-color: #1f5a8c; }
+        .btn-primary:hover { background: #2a70a8; }
+        .cd-box, .lugar-card, .padrino, .tarjeta-simple, .rsvp-card { border-color: rgba(31,90,140,.18); box-shadow: 0 14px 30px -22px rgba(31,90,140,.45); }
+        .timeline::before { background: rgba(31,90,140,.28); }
+        .it-dot { background: #f1f7fc; }
+        .seg input:checked + span { background: #1f5a8c; border-color: #1f5a8c; }
+        .chk input:checked + span { background: rgba(31,90,140,.07); border-color: #1f5a8c; }
+        .chk input:checked + span::before { background-color: #1f5a8c; border-color: #1f5a8c; }
+        .campo, .seg span, .chk span { border-color: rgba(31,90,140,.28); }
+        main > .sec::before { border-color: rgba(31,90,140,.2); }
+        .js main > .sec .banda { background: linear-gradient(180deg, #dcebf8 0%, #f1f7fc 100%); }
+        .js main > .sec.alt .banda { background: linear-gradient(180deg, #cfe3f5 0%, #e4f0fa 100%); }
+        .guarda, #padrinos, .cierre { background: linear-gradient(160deg, #1f5a8c 0%, #3b86bf 100%); }
+        #padrinos .banda { background: radial-gradient(55% 38% at 72% 22%, rgba(255,255,255,.2), transparent 72%), linear-gradient(160deg, #1f5a8c, #3b86bf) !important; }
+        .fondo-foto::after { background: linear-gradient(to bottom, rgba(31,90,140,.30) 0%, rgba(31,90,140,.22) 24%, rgba(22,64,104,.55) 52%, rgba(14,40,68,.9) 100%); }
+        #inicio.con-foto { background-color: #0e2844 !important; }
+        /* Portada y cortinas en azul cielo más vivo */
+        #portada { background-color: #2f6ea3; background-image: radial-gradient(55% 38% at 72% 22%, rgba(255,255,255,.24), transparent 72%), radial-gradient(50% 34% at 22% 84%, rgba(255,255,255,.18), transparent 72%), linear-gradient(160deg, #1f5a8c 0%, #4a94c9 52%, #2d6a9f 100%); }
+        .cortina { background: #1f5a8c; }
+        .pantalla { background-image: radial-gradient(120% 60% at 50% 0%, rgba(255,255,255,.24), transparent 62%), linear-gradient(165deg, #1f5a8c 0%, #3b86bf 52%, #8cc0e6 100%); }
+
+        @media (min-width: 900px) and (min-aspect-ratio: 5/4) { #inicio.con-foto { padding-bottom: 130px; } }
     </style>
 </head>
 <body class="lock">
@@ -771,7 +808,13 @@
             var inicio = $('inicio');
             inicio.classList.add('con-foto');
             var fondo = document.createElement('div'); fondo.className = 'fondo-foto'; fondo.setAttribute('aria-hidden', 'true'); fondo.style.backgroundImage = bg;
+            // Respaldo: la misma foto en la pantalla de inicio, por si el navegador no dibuja la capa fija
+            inicio.style.backgroundImage = bg;
             inicio.insertBefore(fondo, inicio.firstChild);
+            // Si la foto no carga (archivo faltante o vista previa sin carpeta), se muestra el diseño con angelito
+            var prueba = new Image();
+            prueba.onerror = function () { inicio.classList.remove('con-foto'); inicio.style.backgroundImage = ''; if (fondo.parentNode) fondo.parentNode.removeChild(fondo); };
+            prueba.src = CONFIG.portada;
         }
 
         function setMusicaUI(sonando) {
